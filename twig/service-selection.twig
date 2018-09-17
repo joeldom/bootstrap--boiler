@@ -1,0 +1,85 @@
+{% extends 'components/_base.twig' %}
+
+{#
+  Set variables in use on this page.
+#}
+{% set required = '<span class="text-danger">*</span>' %}
+
+{#
+  Overwrite blocks
+#}
+{% block percentageComplete %}40%{% endblock %}
+
+{% block mainContent %}
+  <h1 class="page-title xs-mb-0">Service Selection</h1>
+  <p>Select which service(s) this practice is interested in using</p>
+
+  <hr>
+
+  <h4>
+    <div class="checkbox" data-target="#bv" data-toggle="collapse">
+      <label>
+        <input type="checkbox"> Benefit Verification
+      </label>
+    </div>
+  </h4>
+  <p class="small">Benefit Verification is a request for Careform’s Benefit team to check patients benefit on the clinic’s behalf.</p>
+
+  <div class="collapse xs-ml-20 xs-mb-20" id="bv">
+
+    <div class="radio xs-mb-20">
+      <label>
+        <input type="radio" name="bvOptions" id="bvOptions1" value="">
+        Online Access <br><span class="small">Users will be provided with login access to submit request, view case status and to communicate with our benefit experts</span>
+      </label>
+    </div>
+
+    <div class="radio">
+      <label>
+        <input type="radio" name="bvOptions" id="bvOptions2" value="">
+        Fax Only Services <br><span class="small">Clinics will be set up in our system and all communications are via fax</span>
+      </label>
+    </div>
+
+  </div>
+
+  <h4 class="xs-mt-20">
+    <div class="checkbox" data-target="#ordering" data-toggle="collapse">
+      <label>
+        <input type="checkbox"> Ordering Product Direct from Sanofi
+      </label>
+    </div>
+  </h4>
+
+  <div class="collapse xs-ml-20 xs-mb-20" id="ordering">
+
+
+    <div class="form-group">
+      <label>SAP number is required for these services:</label>
+      <input type="text" class="form-control input-sm" style="width:200px" placeholder="SAP number">
+    </div>
+
+    <div class="radio xs-mb-20">
+      <label>
+        <input type="radio" name="orderingOptions" id="orderingOptions1" value="">
+        Online Access <br><span class="small">Online Ordering will take the place of calling in your order.</span>
+      </label>
+    </div>
+
+    <div class="radio">
+      <label>
+        <input type="radio" name="orderingOptions" id="orderingOptions2" value="">
+        Inventory Management and Online Ordering <br><span class="small">Inventory Management and Online Ordering will allow you to also place order electronically and give the clinic the ability to manage your inventory.  You will be provide with a scanner for each clinic location set up in MySynvisc. This scanner will be used to Scan inventory into the MySynvisc System as well as scanning products out to dispense to patients.</span>
+      </label>
+    </div>
+
+  </div>
+
+{% endblock %}
+
+{% block footer %}
+  {% include 'components/base/_footer.twig' with {
+    backLink: 'demographics.html',
+    nextLink: 'bv-details.html'
+  } only %}
+{% endblock %}

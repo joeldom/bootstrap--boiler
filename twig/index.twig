@@ -1,0 +1,21 @@
+{% extends 'components/_base.twig' %}
+
+{#
+  Overwrite blocks
+#}
+{% block percentageComplete %}10%{% endblock %}
+
+{% block mainContent %}
+  <h1 class="page-title">Careform Onboarding -JOEL</h1>
+
+  <ul>
+    <li><a href="demographics.html">Demographics</a></li>
+    <li><a href="locations.html">Additional Locations</a></li>
+    <li><a href="service-selection.html">Service Selection</a></li>
+    <li><a href="bv-details.html">BV Details</a></li>
+    <li><a href="add-prescribers.html">Add Prescribers</a></li>
+    <li><a href="add-users.html">Add Users</a></li>
+    <li><a href="summary.html">Summary</a></li>
+    <li><a href="validation.html">Validation</a></li>
+  </ul>
+{% endblock %}

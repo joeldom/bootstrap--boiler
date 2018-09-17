@@ -1,0 +1,100 @@
+{% extends 'components/_base.twig' %}
+
+{#
+  Set variables in use on this page.
+#}
+{% set required = '<span class="text-danger">*</span>' %}
+
+{#
+  Overwrite blocks
+#}
+{% block percentageComplete %}60%{% endblock %}
+
+{% block mainContent %}
+  <h1 class="page-title xs-mb-0">Add Prescribers</h1>
+  <p>Our benefit team requires credentials for at least one provider in order to check patient benefits.</p>
+
+  <hr>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">Prescribers</div>
+
+    <ul class="list-group" id="listOfPrescribers">
+      <li class="list-group-item">
+        <span class="pull-right">
+          <a href="#" class="prescriber-trash"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+        </span>
+        <strong>Name Namerson, MD</strong><br>NPI 1234567890, PA 1234567890
+      </li>
+      <li class="list-group-item">
+        <span class="pull-right">
+          <a href="#" class="prescriber-trash"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+        </span>
+        <strong>Name Namerson, MD</strong><br>NPI 1234567890, PA 1234567890
+      </li>
+    </ul>
+
+    <div class="panel-body collapse" id="addAnotherPrescriber">
+
+      <div class="row">
+
+        <div class="col-xs-4">
+          <div class="form-group">
+            <label>First Name:{{ required }}</label>
+            <input type="text" class="form-control" placeholder="First Name" required>
+          </div>
+        </div>
+
+        <div class="col-xs-5">
+          <div class="form-group">
+            <label>Last Name:{{ required }}</label>
+            <input type="text" class="form-control" placeholder="Last Name" required>
+          </div>
+        </div>
+
+        <div class="col-xs-3">
+          <div class="form-group">
+            <label>Suffix:{{ required }}</label>
+            <select class="form-control" required>
+              <option selected="" value="Select Suffix...">Select Suffix...</option>
+              <option value="MD">MD</option>
+              <option value="DO">DO</option>
+              <option value="PA">PA</option>
+              <option value="NP">NP</option>
+            </select>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="form-group">
+        <div class="row">
+
+          <div class="col-xs-6">
+            <label>NPI:{{ required }}</label>
+            <input type="text" class="form-control" placeholder="NPI" required>
+          </div>
+
+          <div class="col-xs-6">
+            <label>State License:{{ required }}</label>
+            <input type="text" class="form-control" placeholder="State License" required>
+          </div>
+        </div>
+
+      </div>
+
+      <p>
+        <a href="#" class="btn btn-default prescriber-cancel">Cancel</a>
+        <a href="#" class="btn btn-primary prescriber-add">Add Prescriber</a>
+      </p>
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block footer %}
+  {% include 'components/base/_footer.twig' with {
+  backLink: 'bv-details.html',
+  nextLink: 'add-users.html'
+  } only %}
+{% endblock %}

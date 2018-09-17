@@ -1,0 +1,10 @@
+//global
+//USED TO HANDLE @imports & dependencies
+//THE ORDER OF THESE DOES MATTER
+//@import 'config/**';
+//@import 'vendor/**';
+//@import 'components/**';
+@import 'config/variables';
+@import 'config/warning';
+//@import 'config/reset';
+//@import 'config/mixins';

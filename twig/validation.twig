@@ -1,0 +1,147 @@
+{% extends 'components/_base.twig' %}
+
+{#
+  Overwrite blocks
+#}
+{% block percentageComplete %}45.5%{% endblock %}
+
+{% block mainContent %}
+  <h1 class="page-title xs-mb-0">Validation of Form Fields &amp; Buttons</h1>
+
+  <hr>
+
+  <h2>Validation</h2>
+  <p>Examples of validated fields use jQuery Validate.</p>
+
+  <form id="validate">
+
+    <div class="form-group">
+      <label>Name:</label>
+      <input type="text" class="form-control" name="name" placeholder="Name">
+    </div>
+
+    <div class="form-group">
+      <label>State:</label>
+      <select name="state" class="form-control">
+        <option value="">Choose one</option>
+        <option value="AL">Alabama</option>
+        <option value="AK">Alaska</option>
+        <option value="AZ">Arizona</option>
+        <option value="AR">Arkansas</option>
+        <option value="CA">California</option>
+        <option value="CO">Colorado</option>
+        <option value="CT">Connecticut</option>
+        <option value="DE">Delaware</option>
+        <option value="DC">District Of Columbia</option>
+        <option value="FL">Florida</option>
+        <option value="GA">Georgia</option>
+        <option value="HI">Hawaii</option>
+        <option value="ID">Idaho</option>
+        <option value="IL">Illinois</option>
+        <option value="IN">Indiana</option>
+        <option value="IA">Iowa</option>
+        <option value="KS">Kansas</option>
+        <option value="KY">Kentucky</option>
+        <option value="LA">Louisiana</option>
+        <option value="ME">Maine</option>
+        <option value="MD">Maryland</option>
+        <option value="MA">Massachusetts</option>
+        <option value="MI">Michigan</option>
+        <option value="MN">Minnesota</option>
+        <option value="MS">Mississippi</option>
+        <option value="MO">Missouri</option>
+        <option value="MT">Montana</option>
+        <option value="NE">Nebraska</option>
+        <option value="NV">Nevada</option>
+        <option value="NH">New Hampshire</option>
+        <option value="NJ">New Jersey</option>
+        <option value="NM">New Mexico</option>
+        <option value="NY">New York</option>
+        <option value="NC">North Carolina</option>
+        <option value="ND">North Dakota</option>
+        <option value="OH">Ohio</option>
+        <option value="OK">Oklahoma</option>
+        <option value="OR">Oregon</option>
+        <option value="PA">Pennsylvania</option>
+        <option value="RI">Rhode Island</option>
+        <option value="SC">South Carolina</option>
+        <option value="SD">South Dakota</option>
+        <option value="TN">Tennessee</option>
+        <option value="TX">Texas</option>
+        <option value="UT">Utah</option>
+        <option value="VT">Vermont</option>
+        <option value="VA">Virginia</option>
+        <option value="WA">Washington</option>
+        <option value="WV">West Virginia</option>
+        <option value="WI">Wisconsin</option>
+        <option value="WY">Wyoming</option>
+      </select>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Submit</button>
+  </form>
+
+  <hr>
+
+  <h3>Buttons</h3>
+
+  <!-- Standard button -->
+  <button type="button" class="btn btn-default">Default</button>
+
+  <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+  <button type="button" class="btn btn-primary">Primary</button>
+
+  <!-- Indicates a successful or positive action -->
+  <button type="button" class="btn btn-success">Success</button>
+
+  <!-- Contextual button for informational alert messages -->
+  <button type="button" class="btn btn-info">Info</button>
+
+  <!-- Indicates caution should be taken with this action -->
+  <button type="button" class="btn btn-warning">Warning</button>
+
+  <!-- Indicates a dangerous or potentially negative action -->
+  <button type="button" class="btn btn-danger">Danger</button>
+
+  <!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
+  <button type="button" class="btn btn-link">Link</button>
+
+  <!-- Disabled -->
+  <button type="button" class="btn btn-disabled">Disabled</button>
+
+{% endblock %}
+
+{% block footerScripts %}
+
+  <script>
+    //  Source: https://stackoverflow.com/questions/18754020/bootstrap-3-with-jquery-validation-plugin
+    $('#validate').validate({
+        rules: {
+          name: {
+            minlength: 3,
+            maxlength: 15,
+            required: true
+          },
+          state: {
+            required: true
+          }
+        },
+        highlight: function (element) {
+          $(element).closest('.form-group').addClass('has-error');
+        },
+        unhighlight: function (element) {
+          $(element).closest('.form-group').removeClass('has-error');
+        },
+        errorElement: 'span',
+        errorClass: 'help-block',
+        errorPlacement: function (error, element) {
+          if (element.parent('.input-group').length) {
+            error.insertAfter(element.parent());
+          } else {
+            error.insertAfter(element);
+          }
+        }
+      }
+    );
+  </script>
+{% endblock footerScripts %}

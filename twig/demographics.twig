@@ -1,0 +1,175 @@
+{% extends 'components/_base.twig' %}
+
+{#
+  Set variables in use on this page.
+#}
+{% set required = '<span class="text-danger">*</span>' %}
+
+{#
+  Overwrite blocks
+#}
+{% block percentageComplete %}10%{% endblock %}
+
+{% block mainContent %}
+  <h1 class="page-title xs-mb-0">Practice Demographics</h1>
+  <p>Please complete the fields below</p>
+
+  <hr>
+
+  <div class="form-group">
+    <label>Sanofi Account Number:</label>
+    <input type="text" class="form-control" placeholder="SAP Number">
+    <p class="help-block small"><strong>What is a SAP number or where can I find my Sanofi Account Number?</strong> Fusce nulla libero, feugiat at feugiat at, dignissim non leo. Suspendisse potenti. Etiam id urna id erat dapibus placerat ac ut nibh.</p>
+  </div>
+
+  <div class="form-group">
+    <label>Practice Name:{{ required }}</label>
+    <input type="text" class="form-control" placeholder="Practice Name" required>
+  </div>
+
+  <div class="form-group">
+    <label>Address 1:{{ required }}</label>
+    <input type="text" class="form-control" placeholder="e.g. 123 Main Street" required>
+  </div>
+
+  <div class="form-group">
+    <label>Address 2:</label>
+    <input type="text" class="form-control" placeholder="e.g. Suite 100" required>
+  </div>
+
+  <div class="form-group">
+    <div class="row">
+
+      <div class="col-xs-5">
+        <label>City:{{ required }}</label>
+        <input type="text" class="form-control" placeholder="City" required>
+      </div>
+
+      <div class="col-xs-3">
+        <label>State: {{ required }}</label>
+        <select class="form-control">
+          <option value="AL">Alabama</option>
+          <option value="AK">Alaska</option>
+          <option value="AZ">Arizona</option>
+          <option value="AR">Arkansas</option>
+          <option value="CA">California</option>
+          <option value="CO">Colorado</option>
+          <option value="CT">Connecticut</option>
+          <option value="DE">Delaware</option>
+          <option value="DC">District Of Columbia</option>
+          <option value="FL">Florida</option>
+          <option value="GA">Georgia</option>
+          <option value="HI">Hawaii</option>
+          <option value="ID">Idaho</option>
+          <option value="IL">Illinois</option>
+          <option value="IN">Indiana</option>
+          <option value="IA">Iowa</option>
+          <option value="KS">Kansas</option>
+          <option value="KY">Kentucky</option>
+          <option value="LA">Louisiana</option>
+          <option value="ME">Maine</option>
+          <option value="MD">Maryland</option>
+          <option value="MA">Massachusetts</option>
+          <option value="MI">Michigan</option>
+          <option value="MN">Minnesota</option>
+          <option value="MS">Mississippi</option>
+          <option value="MO">Missouri</option>
+          <option value="MT">Montana</option>
+          <option value="NE">Nebraska</option>
+          <option value="NV">Nevada</option>
+          <option value="NH">New Hampshire</option>
+          <option value="NJ">New Jersey</option>
+          <option value="NM">New Mexico</option>
+          <option value="NY">New York</option>
+          <option value="NC">North Carolina</option>
+          <option value="ND">North Dakota</option>
+          <option value="OH">Ohio</option>
+          <option value="OK">Oklahoma</option>
+          <option value="OR">Oregon</option>
+          <option value="PA">Pennsylvania</option>
+          <option value="RI">Rhode Island</option>
+          <option value="SC">South Carolina</option>
+          <option value="SD">South Dakota</option>
+          <option value="TN">Tennessee</option>
+          <option value="TX">Texas</option>
+          <option value="UT">Utah</option>
+          <option value="VT">Vermont</option>
+          <option value="VA">Virginia</option>
+          <option value="WA">Washington</option>
+          <option value="WV">West Virginia</option>
+          <option value="WI">Wisconsin</option>
+          <option value="WY">Wyoming</option>
+        </select>
+      </div>
+
+      <div class="col-xs-3">
+        <label>ZIP Code:{{ required }}</label>
+        <input type="tel" class="form-control" placeholder="ZIP code" required>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="row">
+
+    <div class="col-xs-6">
+      <div class="form-group">
+        <label>Phone Number:{{ required }}</label>
+        <input type="tel" class="form-control" placeholder="123-456-7890" required>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="row">
+
+    <div class="col-xs-6">
+      <div class="form-group">
+        <label>Primary Contact Full Name:{{ required }}</label>
+        <input type="text" class="form-control" placeholder="Full Name" required>
+      </div>
+    </div>
+
+    <div class="col-xs-6">
+      <div class="form-group">
+        <label>Primary Contact Email Address:{{ required }}</label>
+        <input type="email" class="form-control" placeholder="Email" required>
+      </div>
+    </div>
+
+  </div>
+
+  <h4>Additional Locations</h4>
+  <p>If your location is part of a multiple site practice and you would like to provide us with the demographics for the other locations, please click below. Otherwise, you may click on the Save &amp; Continue button.</p>
+  <p><a href="locations.html" class="btn btn-primary">Add Additional Locations</a></p>
+{% endblock %}
+
+{% block footer %}
+  <footer class="footer">
+    <div class="max-width">
+      <div class="row">
+        <div class="col-xs-12">
+          <p>
+            <a href="#" class="btn btn-default btn-xs">Submit to Primary Contact</a>
+            <a href="service-selection.html" class="btn btn-warning btn-xs pull-right">Save &amp; Continue <i class="fa fa-long-arrow-right" aria-hidden="true"></i></a>
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-xs-4">
+          <p class="small">If you are an MSM and you have provided all of the information you have access to, please Submit to Primary Contact.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <hr>
+
+  <footer class="footer--help text-center">
+    <div class="max-width">
+      <p class="small"><strong>MySynviscBV Customer Service Center</strong> • 603 Beaver Street, Pittsburgh, PA 15143 <br>
+        Phone: (844) 697-9684 • Fax: (877) 671-3226 • Email: <a href="mailto:support@careform.net">support@careform.net</a> • Hours: M-F 8am - 7pm ET</p>
+    </div>
+  </footer>
+{% endblock %}

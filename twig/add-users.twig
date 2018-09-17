@@ -1,0 +1,108 @@
+{% extends 'components/_base.twig' %}
+
+{#
+  Set variables in use on this page.
+#}
+{% set required = '<span class="text-danger">*</span>' %}
+
+{#
+  Overwrite blocks
+#}
+{% block percentageComplete %}60%{% endblock %}
+
+{% block mainContent %}
+  <h1 class="page-title xs-mb-0">Add Users</h1>
+  <p>If other users need access to the system, please provide the following information. Multiple users are not required, however if you would like for our team to create accounts for other users in the system please provide their information in the space provided.</p>
+
+  <hr>
+
+  <div class="panel panel-default">
+    <div class="panel-heading">Users</div>
+
+    <ul class="list-group" id="listOfUsers">
+      <li class="list-group-item">
+        <span class="pull-right">
+          <a href="#" class="user-trash"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+        </span>
+        <strong>Name Namerson</strong><br>412-123-4567, name@domain.com
+        <div class="small">Receive Daily Benefit Notifications, Can Place Online Orders</div>
+      </li>
+      <li class="list-group-item">
+        <span class="pull-right">
+          <a href="#" class="prescriber-trash"><i class="fa fa-trash fa-lg" aria-hidden="true"></i></a>
+        </span>
+        <strong>Name Namerson</strong><br>
+        412-123-4567, name@domain.com
+        <div class="small">Receive Daily Benefit Notifications, Can Place Online Orders</div>
+      </li>
+    </ul>
+
+    <div class="panel-body collapse" id="addAnotherUser">
+
+      <div class="row">
+
+        <div class="col-xs-4">
+          <div class="form-group">
+            <label>First Name:{{ required }}</label>
+            <input type="text" class="form-control" placeholder="First Name" required>
+          </div>
+        </div>
+
+        <div class="col-xs-4">
+          <div class="form-group">
+            <label>Last Name:{{ required }}</label>
+            <input type="text" class="form-control" placeholder="Last Name" required>
+          </div>
+        </div>
+
+        <div class="col-xs-4">
+          <div class="checkbox xs-mt-20">
+            <label>
+              <input type="checkbox"> Receive Daily Benefit Notifications
+            </label>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row">
+
+        <div class="col-xs-4">
+          <div class="form-group">
+            <label>Phone Number:</label>
+            <input type="tel" class="form-control" placeholder="Phone Number" >
+          </div>
+        </div>
+
+        <div class="col-xs-4">
+          <div class="form-group">
+            <label>Email Address:</label>
+            <input type="email" class="form-control" placeholder="Email">
+          </div>
+        </div>
+
+        <div class="col-xs-4">
+          <div class="checkbox xs-mt-20">
+            <label>
+              <input type="checkbox"> Can Place Online Orders
+            </label>
+          </div>
+        </div>
+
+      </div>
+
+      <p>
+        <a href="#" class="btn btn-default user-cancel">Cancel</a>
+        <a href="#" class="btn btn-primary user-add">Add User</a>
+      </p>
+    </div>
+  </div>
+
+{% endblock %}
+
+{% block footer %}
+  {% include 'components/base/_footer.twig' with {
+  backLink: 'add-prescribers.html',
+  nextLink: 'summary.html'
+  } only %}
+{% endblock %}

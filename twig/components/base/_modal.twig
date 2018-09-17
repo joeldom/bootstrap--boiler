@@ -1,0 +1,29 @@
+{#
+  Modal Template
+
+  This template has the following regions
+  - modalID: id of the modal
+  - modalTitle: Title of the modal
+  - modalBody: Body of the modal
+  - modalFooter: Footer of the modal. Wrap this section with "<div class="modal-footer"></div>"
+#}
+<div class="modal fade" tabindex="-1" role="dialog" id="{% block modalID %}{% endblock %}">
+  <div class="modal-dialog {% block modalSizing %}{% endblock %}" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                  aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">{% block modalTitle %}{% endblock %}</h4>
+      </div>
+      <div class="modal-body">
+        {% block modalBody %}{% endblock %}
+      </div>
+      {% block modalFooter %}
+        {#<div class="modal-footer">#}
+          {#<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>#}
+          {#<button type="button" class="btn btn-primary">Save changes</button>#}
+        {#</div>#}
+      {% endblock %}
+    </div>
+  </div>
+</div>

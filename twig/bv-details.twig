@@ -1,0 +1,47 @@
+{% extends 'components/_base.twig' %}
+
+{#
+  Set variables in use on this page.
+#}
+{% set required = '<span class="text-danger">*</span>' %}
+
+{#
+  Overwrite blocks
+#}
+{% block percentageComplete %}60%{% endblock %}
+
+{% block mainContent %}
+  <h1 class="page-title xs-mb-0">Benefit Verification Details</h1>
+  <p>Select which service(s) this practice is interested in using</p>
+
+  <hr>
+
+  <div class="form-group">
+    <label>Fax Number:{{ required }}</label>
+    <input type="tel" class="form-control" placeholder="Fax Number" required>
+  </div>
+
+  <div class="form-group">
+    <label>Group Tax ID:{{ required }}</label>
+    <input type="text" class="form-control" placeholder="Group Tax ID" required>
+  </div>
+
+  <div class="form-group">
+    <label>Group NPI Number:{{ required }}</label>
+    <input type="text" class="form-control" placeholder="Group NPI Number" required>
+  </div>
+
+  <div class="form-group">
+    <label>Group PTAN:</label>
+    <input type="text" class="form-control" placeholder="Group PTAN">
+    <p class="help-block small">A PTAN number is required for our benefit team to check Patient Medicare eligibility.  You will need to provide us with your group PTAN number if you require Medicare results.</p>
+    <p class="help-block small">Where can I find my clinic’s PTAN? Your practice administrator; The letter sent by your MAC when your clinic enrolled in Medicare; Visit PECOS website</p>
+  </div>
+{% endblock %}
+
+{% block footer %}
+  {% include 'components/base/_footer.twig' with {
+    backLink: 'service-selection.html',
+    nextLink: 'add-prescribers.html'
+  } only %}
+{% endblock %}
