@@ -1,0 +1,49 @@
+.enroll-page {
+
+  .enroll-text {
+    font-size: .85em;
+
+    h4,
+    p {
+      margin: 0;
+    }
+    p.indent {
+      padding-left: 12px;
+    }
+    ul.fa-ul {
+      padding-left: 3px;
+    }
+  }
+
+  .enroll-h4 {
+    color: $color-primary;
+    font-family: $ff-sans-bold;
+    font-size: .95em;
+    margin-bottom: $padding-xsmall;
+    text-transform: none;
+  }
+}
+
+.enroll-bv {
+  .enroll-text {
+    font-size: .85em;
+  }
+  .enroll-h4 {
+    color: $color-primary;
+    font-family: $ff-sans-bold;
+    font-size: .95em;
+    margin-bottom: $padding-xsmall;
+    text-transform: none;
+  }
+  p.indent {
+    padding-left: 12px;
+  }
+}
+
+p.with-chevron {
+  padding-left: 12px;
+
+  i {
+    margin-left: -12px;
+  }
+}

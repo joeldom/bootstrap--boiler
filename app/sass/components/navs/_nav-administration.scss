@@ -1,0 +1,31 @@
+.nav-administration {
+  color: $color-primary;
+  font-family: $ff-sans-light;
+  font-size: .9em;
+  text-transform: uppercase;
+
+  ul {
+    @include list-reset-inline;
+    line-height: 1em;
+
+    li:not(:last-child) {
+      border-right: 1px solid $color-primary;
+    }
+  }
+
+  a {
+    color: $color-primary;
+    display: inline-block;
+    padding: 0 $padding-small 0 ($padding-small - 4px);
+    position: relative;
+    top: 2px;
+  }
+
+  li:first-child a {
+    padding-left:0;
+  }
+
+  li.active a {
+    text-decoration: underline;
+  }
+}

@@ -1,0 +1,91 @@
+.product-order {
+  p {
+    font-size: .8em;
+    line-height: 1.7;
+    margin-bottom: 2px;
+  }
+  .big {
+    font-size: 1.2em;
+  }
+  h4 {
+    color: $text-color;
+    font-family: $ff-sans-bold;
+    font-size: .8em;
+    margin-bottom: $padding-xsmall;
+    text-transform: uppercase;
+    
+    &.text-transform-none {
+      text-transform: none;
+    }
+    &.color-primary {
+      color: $color-primary;
+    }
+  }
+
+  .four-columns {
+    @include clearfix;
+
+    .column {
+      float: left;
+      width: 25%;
+    }
+  }
+
+  .products {
+    @include clearfix;
+    margin-bottom: $padding-xlarge;
+
+    .product {
+      border: 2px solid darken($gray-lighter,15%);
+      border-radius: $border-radius-large;
+      float: left;
+      margin-right: $padding-large;
+      padding: $padding-small;
+      text-align: center;
+      width: 270px;
+
+      img {
+        margin: $padding-small 0;
+        max-width: 100%;
+      }
+
+      .form-group {
+        margin-bottom: 0;
+      }
+
+      label {
+        font-family: $ff-sans;
+        font-size: .8em;
+      }
+
+      input {
+        margin: 0 auto;
+        font-size: 1.4em;
+        text-align: center;
+        width: 80px;
+        height: 45px;
+      }
+
+      label + span {
+        display: block;
+
+        input {
+          display: inline-block;
+        }
+      }
+    }
+    .product.inactive {
+      opacity: .5;
+    }
+    .product__border-accent {
+      border-color: $color-accent;
+    }
+    .product__border-primary {
+      border-color: $color-primary;
+    }
+  }
+
+  .notes-textarea {
+    width: 400px;
+  }
+}

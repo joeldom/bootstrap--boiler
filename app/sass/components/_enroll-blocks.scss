@@ -1,0 +1,72 @@
+//  Decorative version
+.enroll-in-eordering,
+.enroll-widget__eordering {
+  max-width: 293px;
+}
+.enroll-in-eordering.enroll-in-eordering__decorative,
+.enroll-in-bv {
+  border-radius: $border-radius-large;
+  padding-bottom: $padding-small;
+
+  img {
+    border-radius: $border-radius-large $border-radius-large 0 0;
+    max-width: 100%;
+  }
+
+  h3,
+  ul {
+    color: #FFF;
+  }
+
+  h3 {
+    margin: $padding-xsmall 0;
+    padding: 8px 0 5px 27px;
+  }
+
+  ul {
+    @include list-unstyled;
+    margin-left: $padding-xlarge;
+
+    li {
+      margin-bottom: $padding-xsmall;
+
+      .fa.color-accent {
+        color: $color-primary;
+      }
+    }
+  }
+
+  .btn {
+    margin: 0 auto;
+    text-transform: uppercase;
+  }
+}
+
+// Simple version
+.enroll-in-eordering.enroll-in-eordering__simple {
+  border: 1px solid darken($gray-lighter,15%);
+  border-radius: $border-radius-large;
+  padding: $padding-xlarge;
+
+  h3 {
+    margin-top: 0;
+  }
+
+  h4 {
+    color: $text-color;
+    font-family: $ff-sans-bold;
+    font-size: .9em;
+    margin: $padding-medium 0 $padding-xsmall;
+    text-transform: uppercase;
+  }
+  p {
+    font-size: .85em;
+  }
+}
+
+// Dismissal
+.enroll-dismissal {
+  @extend .small;
+  margin-top: $padding-xsmall;
+  cursor: pointer;
+}

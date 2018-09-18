@@ -1,0 +1,16 @@
+.scanner-count {
+  line-height: 1.2;
+  text-align: center;
+
+  &__count {
+    font-size: 30px;
+  }
+
+  &__label {
+    color: $color-secondary;
+    font-size: 11px;
+    font-family: $ff-sans-bold;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+}

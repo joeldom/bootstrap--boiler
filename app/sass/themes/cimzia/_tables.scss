@@ -1,0 +1,18 @@
+.tablesorter-headerAsc,
+.tablesorter-headerDesc {
+  &.tablesorter-header {
+    color: #FFF;
+
+    &:hover {
+      color: rgba(255, 255, 255, 0.8);
+    }
+  }
+}
+
+table.table-inventory-product td .next-line {
+  font-size: 14px;
+}
+
+table.table-inventory-product .product-inventory--category {
+  width: 200px;
+}

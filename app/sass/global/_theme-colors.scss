@@ -1,0 +1,43 @@
+.color-primary {
+  color: $color-primary;
+
+  &--important {
+    color: $color-primary !important;
+  }
+}
+
+.color-secondary {
+  color: $color-secondary;
+
+  &--important {
+    color: $color-secondary !important;
+  }
+}
+
+.color-accent {
+  color: $color-accent;
+
+  &--important {
+    color: $color-accent !important;
+  }
+}
+
+.color-gray {
+  color: #bbbbbb; // $ih-color--gray-darker;
+}
+
+.color-white {
+  color: #fff;
+}
+
+.background-color-primary {
+  background-color: $color-primary;
+}
+
+.background-color-secondary {
+  background-color: $color-secondary;
+}
+
+.background-color-accent {
+  background-color: $color-accent;
+}

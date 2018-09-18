@@ -1,0 +1,34 @@
+$loaderSize: 5px;
+
+.loader {
+  display: block;
+  clear: both;
+  height: $loaderSize;
+  margin-bottom: 15px;
+}
+.loader-block--wrapper {
+  background-color: lighten($color-primary,65%);
+  float: left;
+  display: block;
+  height: $loaderSize;
+  width: $loaderSize;
+  margin-right: 2px;
+  position: relative;
+}
+.loader-block {
+  background-color: $color-primary;
+
+  display: block;
+  height: $loaderSize;
+  width: $loaderSize;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.loader-inside-paragraph {
+  display: inline-block;
+  margin-bottom: 0;
+  margin-left: 5px;
+}

@@ -1,0 +1,68 @@
+.nav-primary {
+  display: inline-block;
+  font-family: $ff-sans-light;
+  text-transform: uppercase;
+  position: relative;
+  height: 63px;
+
+  > ul {
+    display: table;
+    height: 69px;
+    margin-bottom: 0;
+
+    > li {
+      display: table-cell;
+      padding-left: 1px;
+      padding-right: 1px;
+      vertical-align: bottom;
+
+      > a {
+        display: block;
+        border-bottom: 9px solid transparent;
+        color: $color-primary;
+        padding: 0 $padding-medium $padding-xsmall $padding-medium;
+        white-space: nowrap;
+
+        &:hover {
+          color: $color-secondary;
+          text-decoration: none;
+        }
+      }
+
+      &.active > a {
+        border-bottom: 9px solid $color-primary;
+
+        &:hover {
+          color: $color-primary;
+        }
+      }
+
+      &.inactive > a {
+        color: lighten($gray-light,20%);
+        cursor: default;
+      }
+    }
+  }
+
+  .form-control {
+    position: absolute;
+    top:0;
+    left: 285px;
+    width: 360px; // Same width as nav
+
+    font-size: 12px;
+  }
+
+  .twitter-typeahead {
+    position: absolute !important;
+    top:0;
+    left: 285px;
+
+    .form-control {
+      left: 0;
+    }
+    pre {
+      display: none;
+    }
+  }
+}

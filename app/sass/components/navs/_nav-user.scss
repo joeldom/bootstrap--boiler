@@ -1,0 +1,104 @@
+.nav-user {
+  font-size: .85em;
+  font-family: $ff-sans-light;
+  height: 31px;
+  text-transform: uppercase;
+  position: relative;
+  z-index: 1000;
+
+  a {
+    display: inline-block;
+    color: $text-color;
+
+    &:hover {
+      color: $link-hover-color;
+    }
+
+    .fa-comments-o {
+      font-size: 1.3em;
+    }
+
+    .fa-search {
+      font-size: 1.1em;
+    }
+  }
+
+  label {
+    color: $text-color;
+    font-family: $ff-sans-light;
+    font-size: 1em;
+    font-weight: normal;
+  }
+
+  .user {
+    border: 1px solid transparent;
+    cursor: pointer;
+    font-size: 1.2em;
+    line-height: 1;
+    text-transform: none;
+    padding: $padding-xsmall $padding-small;
+    position: relative;
+    min-width: 120px;
+    text-align: left;
+
+    a {
+      color: $color-primary;
+    }
+
+    ul {
+      display: none;
+    }
+
+    &.nav-dropdown-active {
+      display: inline-block;
+      background: $gray-lighter;
+      border: 1px solid darken($gray-lighter,15%);
+      border-radius: $border-radius-base $border-radius-base 0 0;
+      position: relative;
+
+      ul {
+        @include list-unstyled;
+        display: block;
+        background: #FFF;
+        border: 1px solid darken($gray-lighter,15%);
+        border-radius: 0 0 $border-radius-base $border-radius-base;
+        position: absolute;
+        top: 100%;
+        left: -1px;
+        right: -1px;
+        box-shadow: 3px 3px 4px rgba(0,0,0,.2);
+        text-align: left;
+
+        a {
+          display: block;
+          border: none;
+          color: $color-primary;
+          line-height: 1;
+          padding: ($padding-small*1.25) ($padding-small*1.25) $padding-small;
+
+          &:hover {
+            color: $color-secondary;
+            text-decoration: none;
+          }
+        }
+
+        li {
+          display: block;
+                    
+          &:last-child {
+            border-radius: 0 0 $border-radius-base $border-radius-base;
+          }
+          &:not(:last-child) {
+            a {
+              border-bottom: 1px solid darken($gray-lighter,15%);
+            }
+          }
+          a {
+            text-transform: none;
+          }
+        }
+      }
+
+    }
+  }
+}

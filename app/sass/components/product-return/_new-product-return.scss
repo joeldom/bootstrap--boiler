@@ -1,0 +1,52 @@
+.product-photo {
+  background: $gray-lighter;
+  padding: $padding-large;
+  text-align: center;
+  transition: all .15s;
+
+  &__dragndrop,
+  &__uploading,
+  &__success,
+  &__error {
+    display: none;
+  }
+
+  &__uploading,
+  &__success,
+  &__error {
+    margin: 5px 0;
+    padding: 5px;
+  }
+
+  &.has-advanced-upload {
+    .product-photo__dragndrop {
+      display: inline;
+    }
+  }
+
+  &.is-dragover {
+    background: darken($gray-lighter,10%);
+  }
+
+  &.has-error {
+    .product-photo__error {
+      display: inline;
+    }
+  }
+
+  &.success {
+    .product-photo__success {
+      display: inline;
+    }
+  }
+
+  &.uploading {
+    .product-photo__uploading {
+      display: inline;
+    }
+  }
+}
+
+.product-photo__file {
+  width: 100%;
+}

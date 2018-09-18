@@ -1,0 +1,142 @@
+$payer-nav-card--padding: $padding-medium;
+$payer-nav-card--border-color: #DDD;
+
+.payer-nav-card {
+
+  &--before {
+    font-size: .85em;
+    text-align: right;
+    margin-bottom: $padding-xsmall;
+
+    .payer-nav-card--print-wrapper & {
+      display: none;
+    }
+  }
+
+  &--content {
+    border: 2px solid $color-secondary;
+  }
+
+  &--title {
+    border-bottom: 1px solid $payer-nav-card--border-color;
+    font-size: 1.75em;
+    line-height: 1;
+    padding: $padding-medium 50px $padding-medium $payer-nav-card--padding;
+    position: relative;
+  }
+
+  &--print {
+    color: darken($gray-lighter,20%);
+    position: absolute;
+    top: 10px;
+    right: 20px;
+
+    .fa {
+      position: relative;
+      top: 5px;
+    }
+  }
+
+  &--image {
+    display: block;
+    margin-bottom: $padding-small;
+    max-width: 200px;
+  }
+
+  &--content section {
+    font-size: .9em;
+    padding: $payer-nav-card--padding $payer-nav-card--padding $padding-xsmall $payer-nav-card--padding;
+
+    &.border-bottom {
+      border-bottom: 1px solid $payer-nav-card--border-color;
+    }
+
+    strong {
+      text-transform: uppercase;
+    }
+
+    .fa-check {
+      color: $brand-success;
+    }
+  }
+
+  &--submit-section {
+
+    button {
+      border: none;
+      line-height: 1;
+      padding: ($padding-small + $padding-xsmall) 0;
+      text-align: center;
+      transition: all .15s;
+    }
+    &--submit-pa {
+      margin-right: 1%;
+    }
+    &--submit-pa,
+    &--submit-rx {
+      background: lighten($color-secondary, 20%);
+      display: block;
+      float: left;
+      margin-bottom: 1%;
+      width: 49.5%;
+      
+      &:hover {
+        background: lighten($color-secondary, 10%);
+      }
+
+      &.disabled {
+        background: desaturate(lighten($color-secondary, 20%),40%);
+        color: lighten($text-color,20%);
+        cursor: default;
+      }
+    }
+    &--submit-bv {
+      background: $color-accent;
+      clear: both;
+      color: #FFF;
+      width: 100%;
+
+      &:hover {
+        background: darken($color-accent, 5%);
+      }
+
+      &.disabled {
+        background: desaturate($color-accent, 40%);
+        color: transparentize(#FFF,.4);
+        cursor: default;
+      }
+    }
+  }
+}
+
+.payer-nav-card--print-wrapper {
+  button {
+    display: none;
+  }
+  .payer-nav-card--print {
+    display: none;
+  }
+}
+
+@media print {
+  .payer-nav-card {
+    border-color: black;
+
+    &--title {
+      border-color: black;
+    }
+
+    &--print {
+      display: none;
+    }
+
+    section.border-bottom {
+      border-color: black;
+    }
+
+    button {
+      display: none;
+    }
+
+  }
+}

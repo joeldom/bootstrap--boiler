@@ -1,0 +1,91 @@
+/*  ========================================================
+
+CAREFORM KNOWLEDGEBASE
+Author: Randy Oest, oest@amazingrando.com
+
+====================================================== */
+
+@import 'themes/theme--synvisc';
+
+//  Global styles
+//  ========================================================
+@import 'global/variables';
+@import 'global/mixins';
+@import 'global/font-frutiger';
+@import 'global/font-awesome.min';
+@import 'global/normalize';
+@import 'global/utilities';
+@import 'global/responsive-utilities';
+@import 'global/component-animations';
+
+
+// Core styles
+//  ========================================================
+@import 'core/type';
+@import 'core/forms';
+@import 'core/buttons';
+@import 'global/margin-control-utilities';
+
+//  Main area styles.
+//  ========================================================
+.hiq-t {
+  font-family: $font-family-base;
+  font-size: $font-size-base;
+  line-height: $line-height-base;
+  color: $text-color;
+
+  .btn { @extend .btn; }
+  .btn-default { @extend .btn-default; }
+  .btn-primary { @extend .btn-primary; &:link, &:hover, &:link:hover { color: #FFF; text-decoration: none;} }
+  .btn-success { @extend .btn-success; &:link, &:hover, &:link:hover { color: #FFF; text-decoration: none;} }
+  .btn-info { @extend .btn-info; &:link, &:hover, &:link:hover { color: #FFF; text-decoration: none;} }
+  .btn-warning { @extend .btn-warning; &:link, &:hover, &:link:hover { color: #FFF; text-decoration: none;} }
+  .btn-danger { @extend .btn-danger; &:link, &:hover, &:link:hover { color: #FFF; text-decoration: none;} }
+  .btn-gray { @extend .btn-gray; &:link, &:hover, &:link:hover { color: #FFF; text-decoration: none;} }
+  .btn-secondary { @extend .btn-secondary; &:link, &:hover, &:link:hover { color: #FFF; text-decoration: none;} }
+  .btn-accent { @extend .btn-accent; &:link, &:hover, &:link:hover { color: #FFF; text-decoration: none;} }
+  .btn-lozenge { @extend .btn-lozenge; }
+  .btn-wide { @extend .btn-wide; }
+  .btn-link { @extend .btn-link; }
+  .btn-lg { @extend .btn-lg; }
+  .btn-sm { @extend .btn-sm; }
+  .btn-xs { @extend .btn-xs; }
+  .btn-block { @extend .btn-block; }
+
+  table {
+    font-family: $ff-sans;
+
+    td {
+      font-family: $ff-sans;
+    }
+  }
+
+  a,
+  a:link {
+    color: $link-color;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+      color: $link-hover-color;
+      text-decoration: $link-hover-decoration;
+    }
+
+    &:focus {
+      @include tab-focus;
+    }
+  }
+}
+
+//  TOC styles
+//  ========================================================
+.new-toc .ui-toc-tree .x-tree-node .lct-1 a span.ltxt1 {
+  color: $color-primary !important;
+  font-family: $ff-sans;
+}
+
+//  Remove gray header (include ProProfs search and menu)
+//  ========================================================
+#helpiq-header {
+  display: none;
+}

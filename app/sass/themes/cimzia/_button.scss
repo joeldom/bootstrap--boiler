@@ -1,0 +1,49 @@
+.btn-lozenge {
+  border-radius: 20px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.btn-lozenge.btn-xs,
+.btn-group-xs > .btn-lozenge.btn {
+  border-radius: 10px;
+  font-size: 0.875em;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+.btn-lozenge.btn-sm {
+  border-radius: 10px;
+  font-size: 0.875em;
+  padding-top: 1px;
+  padding-bottom: 1px;
+}
+
+
+
+@mixin btn-ghost($color: black) {
+  background: transparent !important;
+  border: 1px solid $color;
+  color: $color;
+
+  &:hover {
+    border-color: darken($color, 10%) !important;
+    color: darken($color,10%) !important;
+  }
+}
+
+.btn-ghost {
+  @include btn-ghost();
+}
+
+.btn-ghost--primary {
+  @include btn-ghost($color-primary);
+}
+
+.btn-ghost--secondary {
+  @include btn-ghost($color-secondary);
+}
+
+.btn-ghost--accent {
+  @include btn-ghost($color-accent);
+}

@@ -1,0 +1,88 @@
+.case-detail {
+  h4 {
+    color: $text-color;
+    font-family: $ff-sans-bold;
+    font-size: .8em;
+    margin-bottom: $padding-xsmall;
+    text-transform: uppercase;
+  }
+  .case-current-status {
+    color: $color-accent;
+  }
+  .clear-all,
+  .post-message {
+    color: $color-accent;
+  }
+}
+
+.table-case-details {
+  font-size: .9em;
+
+  tbody > tr > td {
+    border-top: none;
+    padding: $padding-small;
+  }
+  tbody > tr:nth-of-type(odd) {
+    background-color: $gray-lighter;
+  }
+  td.accent-bkg {
+    background-color: $case-detail--accent-bkg-color;
+  }
+  td.date {
+    padding-right: $padding-xsmall;
+    width: 100px;
+
+    .date-information {
+      display: block;
+      margin-bottom: $padding-xsmall;
+    }
+  }
+  td.content {
+    .subject {
+      display: block;
+      line-height: 1.2;
+      margin-bottom: $padding-small;
+
+      a { margin-left: $padding-xsmall; }
+    }
+    .postedby-under {
+      font-size: .9em;
+    }
+    .source {
+      float: right;
+    }
+    a { color: $text-color; }
+  }
+  td.documents {
+    width: 200px;
+
+    a { color: $text-color; }
+  }
+  td.flag {
+    padding: 5px;
+    text-align: center;
+    width: 50px;
+
+    a,
+    .fa { color: $color-accent; } 
+  }
+}
+
+.case-detail-five-columns {
+  padding-bottom:  $padding-medium;
+
+  .col-1of5 {
+    float: left;
+    padding: 0 15px;
+    width: percentage(1/5);
+
+    p {
+      margin-bottom: 2px;
+    }
+
+    .case-detail-buynbill {
+      font-size: .95em;
+    }
+
+  }
+}

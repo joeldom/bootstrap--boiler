@@ -1,0 +1,65 @@
+.insurance {
+  &--wrapper {
+    border: 1px solid $gray-lighter;
+    border-radius: 5px;
+    padding: $padding-small;
+  }
+}
+
+[data-insurance] {
+  border: 1px solid transparent;
+  clear: both;
+  cursor: pointer;
+  display: inline-block;
+  float: left;
+  padding: $padding-xsmall 20px $padding-xsmall $padding-xsmall !important;
+  position: relative;
+  margin-bottom: 0 !important;
+  margin-left: -$padding-xsmall !important;
+
+  .favorite {
+    position: absolute;
+    top: 5px;
+    right: 3px;
+  }
+
+  &:hover {
+    background: rgba($color-secondary,0.6);
+    border: 1px solid $color-secondary;
+    border-radius: 5px;
+  }
+
+  &.ui-draggable-dragging {
+    background: rgba($color-secondary,0.6);
+    border: 1px solid $color-secondary;
+    border-radius: 5px;
+    z-index: 50000;
+  }
+}
+
+.insurance--wrapper:not(.patient-information).ui-droppable-active {
+  background: $gray-lighter;
+  border-color: $color-secondary;
+  box-shadow: 0 0 10px $color-secondary;
+}
+
+.insuranceAffix {
+  padding-right: $padding-small;
+  padding-left: $padding-small;
+
+  &.affix {
+    overflow: scroll;
+    overflow-x: auto;
+    position: fixed;
+    z-index: 90;
+  }
+}
+
+//  This style is a fix for a z-index bug when using
+//  jQuery draggable and position:fixed.
+//  https://developers.google.com/web/updates/2012/09/Stacking-Changes-Coming-to-position-fixed-elements
+.insuranceAffix-fix {
+  position: fixed;
+  width: 169px;
+  z-index: 10000;
+}

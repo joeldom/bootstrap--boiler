@@ -1,0 +1,11 @@
+.image-with-remove-button {
+  position: relative;
+  display: inline-block;
+
+  &__button {
+    position: absolute;
+    bottom: 10px;
+    left: 37%;
+    min-width: 50px;
+  }
+}

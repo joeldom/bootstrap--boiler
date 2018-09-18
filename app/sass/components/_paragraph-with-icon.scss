@@ -1,0 +1,10 @@
+.paragraph-with-icon {
+  padding-left: 1em;
+
+  i.fa {
+    float: left;
+    margin-left: -1em;
+    position: relative;
+    top: 4px;
+  }
+}

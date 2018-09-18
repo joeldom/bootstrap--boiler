@@ -1,0 +1,36 @@
+.case-fulfillment {
+  &--description {
+    font-size: .9em;
+    line-height: 1.4;
+  }
+
+  &--reveal {
+    margin-left: $padding-medium;
+    margin-top: $padding-medium;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: $padding-medium;
+
+    h5 {
+      margin-top: 0;
+    }
+
+    label {
+      font-family: $ff-sans;
+    }
+  }
+
+  &--bb {
+    margin-bottom: $padding-large;
+
+    &.disabled {
+      color: $gray-light;
+
+      h4 {
+        color: $gray-light;
+      }
+    }
+  }
+
+
+}

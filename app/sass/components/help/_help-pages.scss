@@ -1,0 +1,21 @@
+.help-iframe {
+  width: 100%;
+  min-height: 600px;
+}
+
+.form-control--help-search {
+  display: inline-block;
+  border-radius: 4px;
+  height: 20px;
+  position: relative;
+  top: -3px;
+  line-height: 1.5;
+  width: 200px;
+  font-size: 12px;
+}
+
+.contactHelpCenter {
+  input[type="radio"] {
+    margin-top: 0;
+  }
+}

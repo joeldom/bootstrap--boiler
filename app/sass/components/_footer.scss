@@ -1,0 +1,25 @@
+.footer {
+  font-size: .75em;
+
+  .container {
+    background-color: #fff;
+    box-shadow: inset 0px 5px 10px rgba(0,0,0,.15);
+    padding-top: $padding-small;
+  }
+}
+.footer-fixed {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 100;
+}
+.footer-fixed--full-width {
+  padding-left: 0;
+  padding-right: 0;
+
+  .container {
+    padding-left: 0;
+    padding-right: 0;
+    width: 100%;
+  }
+}

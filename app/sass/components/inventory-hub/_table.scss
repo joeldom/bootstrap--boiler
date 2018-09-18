@@ -1,0 +1,44 @@
+.table.table-inventory-product-empty {
+  margin: 0 15px;
+
+  > thead > tr > th {
+    border-bottom: 0;
+    color: $color-secondary;
+  }
+}
+
+.table.table-inventory-count {
+  border-collapse: collapse;
+  border-radius: 5px;
+  border-style: hidden;
+  box-shadow: 0 0 0 1px $table-border-color;
+
+  th {
+    vertical-align: bottom;
+  }
+
+  th img {
+    max-width: 140px;
+  }
+
+  th:first-child,
+  td:first-child {
+    padding-left: $unit*3;
+  }
+
+  td:first-child {
+    font-size: 19px;
+  }
+
+  th:nth-child(2),
+  th:nth-child(3),
+  td:nth-child(2),
+  td:nth-child(3) {
+    text-align: center;
+    width: 200px;
+  }
+
+  tbody > tr.total-clinics > td {
+    background: lighten($color-secondary, 30%);
+  }
+}

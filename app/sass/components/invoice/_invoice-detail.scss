@@ -1,0 +1,14 @@
+.invoice-detail--label {
+  margin-right: 15px;
+  margin-bottom: 0;
+  color: $color-secondary;
+  font-size: .85em;
+  text-transform: uppercase;
+}
+
+.trade-support--has-billTo,
+.trade-support--has-shipTo {
+  .chosen-container {
+    max-width: 160px;
+  }
+}

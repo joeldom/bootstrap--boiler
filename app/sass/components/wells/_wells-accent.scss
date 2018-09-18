@@ -1,0 +1,15 @@
+//
+// Wells
+//
+// The defaults are in ../libraries/bootstrap/_wells.scss
+// --------------------------------------------------
+
+.well-accent {
+  background-color: $well-accent--bkg-color;
+  border-color: $well-accent--border-color;
+}
+
+.well-accent__outline {
+  @extend .well-accent;
+  background-color: transparent;
+}

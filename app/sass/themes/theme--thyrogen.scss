@@ -1,0 +1,26 @@
+$color-primary: #A02D96;
+$color-secondary: #888b8d;
+$color-accent: #00337F;
+$text-color: #545759;
+
+$link-color: lighten($color-accent,10%);
+$link-hover-color: darken($link-color, 5%) !default;
+
+$table-case-listing-requiring-attention--bkg-color--odd: lighten($color-primary,40%);
+$table-case-listing-requiring-attention--bkg-color--even: lighten($color-primary,50%);
+$table-case-listing-requiring-attention--bkg-color--odd--hover: lighten($color-primary,20%);
+$table-case-listing-requiring-attention--bkg-color--even--hover: lighten($color-primary,20%);
+
+$table-bg-hover: $color-secondary;
+
+$well-accent--bkg-color: lighten($color-accent,30%);
+$well-accent--border-color: $color-accent;
+$case-requiring-action--bkg-color: lighten($color-primary,25%);
+
+$case-detail--accent-bkg-color: lighten($color-primary,35%);
+
+$single-drug--width: auto;
+$single-drug--min-height: 140px;
+$drug-selection-slideshow--img--margin: 15px 0 1px;
+
+$label-warning-bg--theme: $color-primary;

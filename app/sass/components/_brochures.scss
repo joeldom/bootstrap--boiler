@@ -1,0 +1,32 @@
+.brochure {
+  margin-right: 1%;
+  margin-bottom: 1%;
+  border: 1px solid lighten($gray-light,35%);
+  border-radius: $border-radius-base;
+  float: left;
+  padding: $padding-medium;
+  width: 40%;
+
+  &:nth-child(even) {
+    margin-right: 0;
+  }
+
+  &__wrapper {
+    @include clearfix;
+  }
+
+  &__caption {
+    font-size: .8em;
+  }
+
+  &__image {
+    margin-right: $padding-small;
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.2);
+    border: 1px solid rgba(0,0,0,0.3);
+    float: left;
+  }
+
+  &__quantity {
+    margin-top: 30px;
+  }
+}

@@ -1,0 +1,77 @@
+.payer-information-list {
+  h3 {
+    margin: 0;
+    padding-right: 25px;
+    position: relative;
+
+    .favorite {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  // Nested list styles
+  ul {
+    @include list-reset;
+    margin: 10px -15px 0;
+
+    li {
+      &:last-child {
+        padding-bottom: 0;
+
+        a {
+          border-bottom: none;
+        }
+      }
+
+    }
+
+    a {
+      display: block;
+      position: relative;
+      padding: 10px 15px 10px 30px;
+      margin-bottom: -1px;
+      background-color: $list-group-bg;
+      border: 1px solid $list-group-border;
+      border-right: none;
+      border-left: none;
+
+      color: $text-color;
+      transition: all .15s;
+
+      &:hover {
+        background-color: lighten($color-secondary, 20%);
+        text-decoration: none;
+      }
+
+    }
+  }
+
+  .list-group-item {
+
+    &[data-toggle="collapse"] {
+      cursor: pointer;
+    }
+
+    &[aria-expanded="false"] {
+      .fa-chevron-up {
+        display: none;
+      }
+    }
+    &[aria-expanded="true"] {
+      .fa-chevron-down {
+        display: none;
+      }
+    }
+  }
+
+  &--utilities {
+    color: lighten($gray-light, 10%);
+    float: right;
+
+    .payer-information-list--count__empty {
+      margin-right: 17px;
+    }
+  }
+}

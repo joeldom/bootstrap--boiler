@@ -1,0 +1,49 @@
+// 	==================================================================
+//  Synvisc
+//
+//	Author  : Randy Oest
+//	Company : Amazing Rando Design
+//	Email   : oest@amazingrando.com
+//	Date    : Summer 2016
+// 	==================================================================
+
+@import 'themes/theme--synvisc';
+@import 'themes/theme--default-import';
+
+//  ========================================================
+//  Synvisc theme overrides
+//  ========================================================
+
+// Enroll Widget
+.enroll-in-eordering.enroll-in-eordering__decorative,
+.enroll-in-bv {
+  background: $color-primary;
+
+  h3 {
+    background: url('@@imgCSS/enroll-arrow--synvisc.png') no-repeat center left;
+  }
+  ul li .fa.color-accent {
+    color: $color-accent;
+  }
+  .btn {
+    background: $color-secondary;
+  }
+}
+
+.product-logo.product-logo--mysynvisc {
+  position: absolute;
+  width: 192px;
+  top: -22px;
+
+  + .nav-primary {
+    padding-left: 285px;
+  }
+}
+
+.header_primary {
+  overflow: visible; // This is so that logo can hang down.
+}
+
+.ui-datepicker .ui-datepicker-header {
+  background: #f5f5f5;
+}

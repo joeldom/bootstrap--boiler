@@ -1,0 +1,144 @@
+table.table-inventory-product {
+  .product-inventory--checkbox {
+    width: 37px;
+  }
+  .product-inventory--product {}
+  .product-inventory--syringes {
+    width: 76px;
+  }
+  .product-inventory--lot {}
+  .product-inventory--serial {}
+  .product-inventory--expiration {
+    width: 90px;
+  }
+  .product-inventory--added {
+    width: 90px;
+  }
+  .product-inventory--patient {}
+  .product-inventory--prescriber {}
+  .product-inventory--category {
+    width: 191px;
+  }
+  .product-inventory--dispense-date {
+    width: 190px;
+  }
+
+  .product-inventory--adherence-report--clinic {
+    width: 185px;
+
+    &--td {
+      display: block;
+      width: 185px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+  }
+
+
+
+  > tbody > tr > td {
+    padding: 15px 5px;
+  }
+
+  > tbody > tr.today-line {
+    background: $color-primary;
+    color: #FFF;
+    text-align: center;
+
+    td {
+      padding: 5px;
+    }
+  }
+
+  > tbody > tr.alert {
+    background: $alert-danger-bg;
+    color: $alert-danger-text;
+
+    &:hover {
+      background: darken($alert-danger-bg,5%);
+
+      td {
+        color: $alert-danger-text;
+      }
+
+      .next-line {
+        color: $alert-danger-text;
+      }
+    }
+
+    .next-line {
+      color: $alert-danger-text;
+    }
+
+  }
+
+  > tbody > tr.dispensed {
+    background: $ih-color--dispensed;
+    color: $text-color;
+
+    &:hover {
+      background: darken($ih-color--dispensed,5%);
+
+      td {
+        color: $text-color;
+      }
+
+      .next-line {
+        color: $text-color;
+      }
+    }
+
+    .next-line {
+      color: $text-color;
+    }
+
+  }
+
+  td {
+    .next-line {
+      display: block;
+      color: lighten($text-color, 25%);
+      font-size: 11px;
+    }
+  }
+  tr:hover td .next-line {
+    color: #FFF;
+  }
+}
+
+.product-inventory-check-all {
+  height: 30px;
+
+  i {
+    position: relative;
+    top: 2px;
+  }
+
+  .fa-check-square-o {
+    display: none;
+  }
+
+  &.checked .fa-check-square-o {
+    display: inline;
+  }
+
+  &.checked .fa-square-o {
+    display: none;
+  }
+}
+
+.product-inventory-filters {
+  .chosen-container-single .chosen-single {
+    height: 30px;
+    padding-top: 3px;
+  }
+}
+
+input.table-inventory-product__missing-person {
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  width: 230px;
+}

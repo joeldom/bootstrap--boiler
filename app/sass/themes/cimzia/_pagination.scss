@@ -1,0 +1,15 @@
+.pagination > li > a,
+.pagination > li > span {
+  color: $text-color;
+}
+
+.pagination > li > a:hover,
+.pagination > li > a:focus,
+.pagination > li > span:hover,
+.pagination > li > span:focus {
+  color: $color-primary;
+}
+
+.table-pagination .input-group-wrapper .form-control {
+  height: 30px;
+}

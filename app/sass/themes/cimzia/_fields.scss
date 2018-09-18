@@ -1,0 +1,46 @@
+.form-control {
+  font-family: $font-family-sans-serif;
+  font-size: 14px;
+}
+
+.chosen-container-single .chosen-single span:after {
+  color: $color-primary;
+}
+
+.field-required,
+.required {
+  color: $color-primary;
+}
+
+.my-prescribers--selections li,
+.my-clinic--selections li {
+  border-color: $color--black-50;
+  color: $color--black-50;
+}
+
+.datepicker--icon,
+.date-icon {
+  color: $color-primary;
+  font-size: 0.9em; 
+}
+
+.ui-datepicker .ui-datepicker-prev {
+  text-transform: uppercase;
+  font-size: 14px;
+  top: 17px;
+}
+
+.ui-datepicker .ui-datepicker-next {
+  right: 35px;
+  text-transform: uppercase;
+  font-size: 14px;
+  top: 17px;
+}
+
+.reports--charts--circle--text {
+  font-size: 0.75em;
+}
+
+.datepicker--icon, .date-icon {
+  top: 4px;
+}

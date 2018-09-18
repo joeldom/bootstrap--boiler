@@ -1,0 +1,36 @@
+@media print {
+  .no-print {
+    display: none; }
+  .col-p-12 {
+    width: 100%; }
+  .header_secondary,
+  .nav-user,
+  .nav-primary,
+  .header_primary-utilities,
+  .case-table-of-contents {
+    display: none; }
+  .header_primary {
+    border-top: none;
+    position: relative;
+    top: 0;
+    padding-top: 20px;
+    height: auto; }
+  body {
+    padding-top: 0 !important; }
+  .product-logo,
+  .product-logo.product-logo--mysynvisc {
+    position: static !important; }
+  .footer-fixed {
+    position: static; }
+  .has-products-added-widget {
+    width: 100% !important;
+    page-break-before: always !important;
+    float: none;
+    clear: both; }
+    .has-products-added-widget .collapse {
+      display: block !important; }
+    .has-products-added-widget .closed,
+    .has-products-added-widget .open {
+      display: none !important; }
+    .has-products-added-widget thead {
+      display: table-row-group; } }

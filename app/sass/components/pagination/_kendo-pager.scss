@@ -1,0 +1,54 @@
+// 	==================================================================
+//
+//	Pager at the bottom of tables
+//
+//	We're overriding a lot of Kendo UI here.
+//
+//	*** This CSS assumes that Kendo is loaded BEFORE main.css. ***
+//
+// 	==================================================================
+.k-pager-wrap {
+  background: none;
+  border: none;
+  color: $text-color;
+  padding: $padding-medium 0;
+
+  .k-link {
+    border-radius: $border-radius-small !important;
+    color: $text-color;
+  }
+  .k-pager-nav {
+    background-color: $gray-lighter;
+    border-color: darken($gray-light,10%);
+
+    &:hover {
+      background: lighten($gray-light,25%);
+      border-color: darken($gray-light,20%);
+    }
+  }
+  .k-state-disabled,
+  .k-state-disabled span {
+    cursor: auto !important;
+  }
+
+  .k-pager-numbers {
+    margin: 0 $padding-xsmall;
+    display: inline-block;
+    float: left;
+
+    .k-link {
+      border-color: darken($gray-light,10%);
+
+      &:hover {
+        background: lighten($gray-light,25%);
+        border-color: darken($gray-light,20%);
+      }
+    }
+    .k-state-selected {
+      background-color: $gray;
+      border-color: transparent;
+      border-radius: $border-radius-small !important;
+      color: #fff;
+    }
+  }
+}

@@ -1,0 +1,109 @@
+.drug-selection-slideshow {
+  position: relative;
+  padding: 0 $padding-large;
+
+  .cycle-slide {
+    margin-bottom: 5px; 
+    padding-right: $padding-small;
+    padding-left: $padding-small;
+    padding-bottom: $padding-xsmall;
+    position: relative;
+
+    a {
+      border: 1px solid darken($gray-lighter,15%);
+      border-radius: 4px;
+      display: block;
+      position: relative;
+    }
+
+    img {
+      border-radius: 4px;
+      max-width: 100%;
+      margin: $drug-selection-slideshow--img--margin;
+    }
+    .cycle-caption {
+      position: absolute;
+      bottom: 10px;
+      text-align: center;
+      width: 100%;
+      display: block;
+
+      font-size: .9em;
+      line-height: 1.2
+    }
+  }
+}
+
+#cycle-prev,
+#cycle-next {
+  cursor: pointer;
+  position: absolute;
+  top: 24%;
+}
+#cycle-prev {
+  left: 0;
+}
+#cycle-next {
+  right: 0;
+}
+
+.js .drug-selection-slideshow-requires-js {
+  display: none;
+}
+
+
+
+.single-drug {
+  border: 1px solid darken($gray-lighter,15%);
+  border-radius: 4px;
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+  width: $single-drug--width;
+  min-height: $single-drug--min-height;
+
+  img {
+    border-radius: 4px;
+    max-width: 250px;
+    margin: $drug-selection-slideshow--img--margin;
+    width: 100%;
+  }
+  .cycle-caption {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
+    display: block;
+
+    font-size: .9em;
+    line-height: 1.2
+  }
+}
+
+.triple-drug {
+  border: 1px solid darken($gray-lighter,15%);
+  border-radius: 4px;
+  display: inline-block;
+  margin-right: 2%;
+  position: relative;
+  width: 30%;
+
+  img {
+    border-radius: 4px;
+    max-width: 100%;
+  }
+  .cycle-caption {
+    position: absolute;
+    bottom: 10px;
+    text-align: center;
+    width: 100%;
+    display: block;
+
+    font-size: .9em;
+    line-height: 1.2
+  }
+}
+
+.drug-option--selected {
+  border-color: $color-primary !important;
+}

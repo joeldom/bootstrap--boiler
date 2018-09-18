@@ -1,0 +1,15 @@
+.inquiry-results-label {
+
+}
+.inquiry-results {
+  dt {
+    float: left;
+    width: 140px;
+  }
+  dd {
+    display: block;
+    margin-bottom: $padding-xsmall;
+    padding-left: 150px;
+    width: 100%;
+  }
+}

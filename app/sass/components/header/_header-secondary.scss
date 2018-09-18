@@ -1,0 +1,23 @@
+.header_secondary {
+  background-color: #a5a6a8;
+  border-bottom: $padding-xsmall solid #fff;
+  color: #fff;
+  padding: $padding-xsmall 0;
+
+  .product-select {
+    @include make-xs-column(12);
+    text-align: right;
+
+    label {
+      font-weight: normal;
+    }
+    .form-group {
+      text-align: left;
+    }
+    .chosen-container-single .chosen-single {
+      background-color: #b8b8b8;
+      border: 1px solid #fff;
+      color: #fff;
+    }
+  }
+}

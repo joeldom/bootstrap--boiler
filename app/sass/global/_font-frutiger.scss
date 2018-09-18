@@ -1,0 +1,42 @@
+
+
+@font-face {
+  font-family: 'Frutiger';
+  src: url('@@font/frutiger/FrutigerLTStd-Roman.eot');
+  src: url('@@font/frutiger/FrutigerLTStd-Roman.eot?#iefix') format('embedded-opentype'),
+  url('@@font/frutiger/FrutigerLTStd-Roman.woff') format('woff'),
+  url('@@font/frutiger/FrutigerLTStd-Roman.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+@font-face {
+  font-family: 'FrutigerBold';
+  src: url('@@font/frutiger/FrutigerLTStd-Bold.eot?') format('eot'),
+  url('@@font/frutiger/FrutigerLTStd-Bold.otf')  format('opentype'),
+  url('@@font/frutiger/FrutigerLTStd-Bold.woff') format('woff'),
+  url('@@font/frutiger/FrutigerLTStd-Bold.ttf')  format('truetype'),
+  url('@@font/frutiger/FrutigerLTStd-Bold.svg#FrutigerLTStd-Bold') format('svg');
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'FrutigerLight';
+  src: url('@@font/frutiger/FrutigerLTStd-Light.eot?') format('eot');
+  src: url('@@font/frutiger/FrutigerLTStd-Light.eot?#iefix') format('embedded-opentype'),
+  url('@@font/frutiger/FrutigerLTStd-Light.otf')  format('opentype'),
+  url('@@font/frutiger/FrutigerLTStd-Light.woff') format('woff'),
+  url('@@font/frutiger/FrutigerLTStd-Light.ttf')  format('truetype'),
+  url('@@font/frutiger/FrutigerLTStd-Light.svg#FrutigerLight') format('svg');
+}
+
+@font-face {
+  font-family: 'FrutigerBlack';
+  src: url('@@font/frutiger/FrutigerLTStd-Black.eot?') format('eot'),
+  url('@@font/frutiger/FrutigerLTStd-Black.otf')  format('opentype'),
+  url('@@font/frutiger/FrutigerLTStd-Black.woff') format('woff'),
+  url('@@font/frutiger/FrutigerLTStd-Black.ttf')  format('truetype'),
+  url('@@font/frutiger/FrutigerLTStd-Black.svg#FrutigerBlack') format('svg');
+}

@@ -1,0 +1,49 @@
+//  Kendo UI
+//
+//  This file is to overwrite elements of the Kendo UI.
+
+//  Sorter icons
+.k-widget table .k-header[data-dir="asc"] .k-link:after {
+  content:"\f0d8"; // up
+  margin-left: 3px;
+  background: none;
+  font-family: "FontAwesome";
+  display: inline;
+  width: auto;
+  height: auto;
+}
+.k-widget table .k-header[data-dir="desc"] .k-link:after {
+  content:"\f0d7"; // down
+  margin-left: 3px;
+  background: none;
+  font-family: "FontAwesome";
+  display: inline;
+  width: auto;
+  height: auto;
+}
+
+
+//  Active sort column.
+.k-widget table .k-header[data-dir="desc"],
+.k-widget table .k-header[data-dir="asc"] {
+  background-color: $color-primary;
+  border-bottom-color: $color-primary !important;
+  color: #fff;
+  padding-top: 3px;
+
+  &:hover {
+    color: #fff;
+  }
+
+  a {
+    color: #FFF;
+
+    &:hover {
+      color: #FFF;
+    }
+  }
+}
+
+// tablesorter-active-column
+
+

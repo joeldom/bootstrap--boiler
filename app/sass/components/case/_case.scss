@@ -1,0 +1,107 @@
+.case-list--notice-wrapper {
+  display: inline-block;
+  margin-bottom: 0;
+  padding-bottom: $padding-xsmall;
+
+  .case-list--notice {
+    font-size: 1.75em;
+    margin-right: $padding-xsmall;
+    position: relative;
+    bottom: -4px;
+  }
+}
+
+.has-insurance,
+.no-insurance {
+  margin-left: 40px;
+}
+
+.case-content {
+  #city {
+    width: 200px;
+  }
+  #state {
+    width: 120px;
+  }
+  #zip {
+    width: 100px;
+  }
+}
+
+.case-close {
+  width: 17px;
+}
+
+.case-requiring-action,
+.case-incomplete-drafts {
+  font-size: .85em;
+  padding-bottom: $padding-small;
+  position: relative;
+
+  h3 {
+    font-family: $ff-sans-bold;
+    font-size: 1.25em;
+    margin: 0 0 $padding-xsmall;
+  }
+  p {
+    margin-bottom:$padding-xsmall;
+  }
+}
+
+.case-requiring-action {
+  cursor: pointer;
+  &:hover {
+    background-color: $case-requiring-action--bkg-color;
+  }
+}
+
+.case-incomplete-drafts-close {
+  position: absolute;
+  top: $padding-small;
+  right: $padding-small;
+  cursor: pointer;
+}
+
+.case-read-more {
+  display: block;
+  text-align: center;
+}
+
+.table-recently-completed {
+  .caseID {
+    width: 90px;
+    white-space: nowrap;
+  }
+  .person {
+    max-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .archive {
+    text-align: center;
+    width: 60px;
+
+    a {
+      color: $text-color;
+    }
+  }
+
+  th {
+    &.caseID,
+    &.person,
+    &.archive {
+      color: $link-color;
+    }
+  }
+}
+
+.cases-empty-text {
+  color: $gray-light;
+  margin-top: $padding-large;
+  text-align: center;
+
+  + .case-read-more {
+    margin-top: $padding-large;
+  }
+}

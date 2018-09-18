@@ -1,0 +1,88 @@
+//  ======================================================
+//  Headers are fixed to the top
+//  ======================================================
+.header_secondary,
+.header_primary {
+  position: fixed;
+  top:0;
+  width: 100%;
+  z-index: 2000;
+}
+.header_secondary {
+  height: 41px;
+  z-index: 2010;
+}
+
+.header_secondary + .header_primary {
+  top: 41px;
+}
+.header_primary {
+  height: $header_primary_height;
+
+  @media screen and (min-width: 1300px) {
+    .container {
+      width: 1300px;
+    }
+  }
+  
+  .eordering & {
+    top: 0;
+  }
+}
+.header_secondary.hidden + .header_primary {
+  top: 0;
+}
+
+//  ======================================================
+//  Main content framework
+//  ======================================================
+.main-content {
+  @include make-xs-column(12);
+  padding-bottom: 50px;
+}
+.main-content.with-sidebar {
+  @include make-xs-column(8);
+
+  + .sidebar {
+    @include make-xs-column(4);
+    padding-bottom: 50px;
+  }
+}
+
+.main-content.case-list-old {
+  @include make-xs-column(9);
+
+  + .sidebar {
+    @include make-xs-column(3);
+    padding-bottom: 50px;
+  }
+}
+
+//  ======================================================
+//  Main content skinny
+//  ======================================================
+.main-content-skinny {
+  margin: 0 35px;
+  width: 65%;
+
+  &.enroll-page {
+    width: auto;
+  }
+
+  .ordering-only & {
+    padding: 0 35px;
+    width: auto;
+  }
+
+  &.enroll-bv {
+    padding: 0;
+    width: auto;
+  }
+}
+.main-content-skinny--ordering-summary {
+  padding: 0 70px;
+}
+.main-content-skinny--product-ordering-details {
+  margin: 0 35px;
+  width: 65%;
+}

@@ -1,0 +1,62 @@
+.scanner {
+  display: flex;
+  margin: 15px 15px 0 15px;
+  background: $ih-color--gray-light;
+  border: 1px solid $ih-color--gray;
+  border-radius: 5px;
+}
+
+.scanner__column {
+  float: left;
+  padding: 15px 20px;
+  position: relative;
+
+  &--1 {
+    width: 20%;
+  }
+
+  &--2 {
+    text-align: center;
+    width: 15%;
+  }
+
+  &--3 {
+    width: 65%;
+  }
+
+  p {
+    font-size: 13px;
+  }
+
+  &--1-of-2 {
+    width: 40%;
+  }
+
+  &--2-of-2 {
+    width: 60%;
+  }
+}
+
+.scanner__column--border-right {
+  border-right: 1px solid $ih-color--gray;
+}
+
+.scanner__column--history {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+}
+
+.nav-for-scan-states {
+  position: fixed;
+  top: 0;
+  left: 41%;
+  padding: 1em 2em;
+  background: $color-primary;
+  z-index: 100000;
+  color: #fff;
+
+  a {
+    color: lighten($color-primary,45%);
+  }
+}

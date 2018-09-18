@@ -1,0 +1,88 @@
+//_alacarte.scss
+$boiler-color: #3D5AFE;
+.bg-boiler{
+  background-color: $boiler-color;
+
+  .dropdown-menu, .dropdown-item{
+    background-color: $boiler-color;
+    color: white;
+  }
+  .dropdown-item:hover{
+    background-color: darken($boiler-color, 15%);
+  }
+}
+.grid-example {
+  position: relative;
+  padding: 1rem;
+  //margin: 1rem (-$grid-gutter-width / 2) 0;
+  //border: solid $gray-100;
+  border-width: .2rem 0 0;
+  //@include clearfix();
+
+  // @include media-breakpoint-up(sm) {
+  //   padding: 1.5rem;
+  //   margin-right: 0;
+  //   margin-left: 0;
+  //   border-width: .2rem;
+  // }
+
+  + .highlight,
+  + .clipboard + .highlight {
+    margin-top: 0;
+  }
+
+  + p {
+    margin-top: 2rem;
+  }
+
+  .pos-f-t {
+    position: relative;
+    margin: -1rem;
+
+    // @include media-breakpoint-up(sm) {
+    //   margin: -1.5rem;
+    // }
+  }
+
+  .custom-file-input:lang(es) ~ .custom-file-label::after {
+    content: "Elegir";
+  }
+
+  > .form-control {
+    + .form-control {
+      margin-top: .5rem;
+    }
+  }
+
+  > .nav + .nav,
+  > .alert + .alert,
+  > .navbar + .navbar,
+  > .progress + .progress,
+  > .progress + .btn {
+    margin-top: 1rem;
+  }
+
+  > .dropdown-menu:first-child {
+    position: static;
+    display: block;
+  }
+
+  > .form-group:last-child {
+    margin-bottom: 0;
+  }
+
+  > .close {
+    float: none;
+  }
+}
+.grid-example{
+  .row {
+    > .col, .w-100,
+    > [class^="col-"] {
+      padding-top: .75rem;
+      padding-bottom: .75rem;
+      background-color: rgba(86, 61, 124, .15);
+      border: 1px solid rgba(86, 61, 124, .2);
+    }
+  }
+}

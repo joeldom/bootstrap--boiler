@@ -1,0 +1,30 @@
+.quick-dispense {
+  border: 1px solid $ih-color--gray;
+  border-radius: 5px;
+  margin-top: 25px;
+
+  .row__quick-dispense {
+    margin: 0;
+  }
+
+  .col__quick-dispense {
+    padding: 45px;
+    text-align: center;
+
+    &:first-child {
+      border-right: 1px solid $ih-color--gray;
+      background: $ih-color--gray-lighter;
+      border-radius: 5px 0 0 5px;
+    }
+
+    &:last-child {
+      background: $ih-color--gray-light;
+      border-radius: 0 5px 5px 0;
+    }
+  }
+}
+
+.qd-label {
+  font-size: 18px;
+  margin-bottom: 10px;
+}

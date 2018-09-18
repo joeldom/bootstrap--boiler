@@ -1,0 +1,27 @@
+.system-notification {
+  margin: 0 -15px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  color: #FFF;
+
+  a {
+    color: #FFF;
+  }
+}
+
+.system-notification--close {
+  color: #FFF;
+
+  &:hover {
+    color: #FFF;
+  }
+}
+
+.system-notification--important {
+  font-size: 1.2em;
+}
+
+.has-black-box {
+  margin-top: -20px;
+  margin-bottom: 20px;
+}

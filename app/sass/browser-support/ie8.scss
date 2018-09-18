@@ -1,0 +1,85 @@
+body {
+  background-image: none;
+  background: #fff !important;
+}
+
+.header_primary {
+  border-bottom: 1px solid #333;
+}
+.footer {
+  border-top: 1px solid #333;
+}
+.nav-primary a {
+  padding: 0 5px 13px;
+}
+
+.my-prescriber-list--four-col {
+  .checkbox {
+    display: inline-block;
+    width:23%;
+  }
+}
+.header_secondary .product-select label {
+  display: inline;
+}
+.nav-user ul li label {
+  display: inline;
+}
+.datepicker--wrapper {
+  float: left;
+  width: 100px !important;
+
+  input {
+    width: 100px !important;
+  }
+}
+.case-list--datepicker-wrapper {
+  width: 350px;
+}
+.case-list--datepicker-label {
+  float: left;
+}
+
+.toc-toggle {
+  text-align: center;
+
+  &:before {
+    content: '-';
+    display: block;
+    margin-left: 0px;
+    text-align: center;
+
+    .collapsed & {
+      content: '+';
+    }
+  }
+  .toc-toggle-bar {
+    display: none;
+  }
+}
+
+.doesPatientHaveInsuranceRadio {
+  width: 200px;
+
+  + .doesPatientHaveInsuranceRadio {
+    width: 300px;
+  }
+}
+
+.policyHolderName {
+  width: 100%;
+}
+
+.medicationCoverageDateNeeded {
+  .form-group {
+    width: 100%;
+
+    label,
+    .checkbox {
+      float: left;
+    }
+    .checkbox {
+      width: 100px;
+    }
+  }
+}

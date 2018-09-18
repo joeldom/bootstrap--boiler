@@ -1,0 +1,34 @@
+.radio-toolbar input[type="radio"] {
+  display: none;
+}
+
+.radio-toolbar label {
+  @include button-variant(#fff, $color-secondary, $color-secondary);
+
+  display: inline-block;
+  background: transparent;
+  border: 1px solid $color-secondary;
+  border-radius: 15px;
+  color: $color-secondary;
+  cursor: pointer;
+  padding-left: $padding-small;
+  padding-right: $padding-small;
+
+  &:hover {
+    border-color: darken($color-secondary, 10%) !important;
+    color: #FFF;
+  }
+
+}
+
+.radio-toolbar input[type="radio"]:checked + label {
+  background: $color-primary;
+  border-color: $color-primary;
+  color: #FFF;
+
+  &:hover {
+    background: darken($color-primary, 10%) !important;
+    border-color: darken($color-primary, 10%) !important;
+    color: #FFF;
+  }
+}

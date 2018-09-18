@@ -1,0 +1,18 @@
+.popover--wrapper {
+  cursor: pointer;
+
+  .fa-stack {
+    width: 1em;
+    height: 1em;
+    line-height: 1em;
+  }
+  .fa-question {
+    font-size: .7em;
+  }
+}
+
+img.scan-popover {
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}

@@ -1,0 +1,149 @@
+.col-newsfeed {
+  width: 60.5568445%;
+}
+.col-cases {
+  width: 100% - 60.5568445%;
+}
+
+#myPrescribers + .chosen-container-multi {
+  min-width: 400px;
+}
+.myPrescribers--label {
+  margin-top: 3px;
+}
+.myPrescribers--toggle {
+  color: $link-color;
+  cursor: pointer;
+  font-size: .8em;
+  text-transform: uppercase;
+}
+
+.cases-needing-action {
+  font-size: 1.2em;
+  line-height: 1;
+  margin-right: 10px;
+  position: relative;
+  top: -4px;
+  vertical-align: middle;
+}
+.cases-needing-action--count {
+  font-size: 1.5em;
+  margin-right: 5px;
+  vertical-align: middle;
+}
+
+
+.news-feed--notifications {
+  position: relative;
+}
+.news-feed--notifications--badge {
+  position: absolute;
+  top: 3px;
+  left: 125px;
+  z-index: 100;
+}
+
+
+.cases-toggle-header {
+  display: block;
+
+  .jump-link {
+    font-size: .4em;
+    a {
+      color: $gray-light;
+    }
+  }
+}
+#open-cases {
+  border-bottom: 1px solid $gray-light;
+}
+
+.cases-toggle {
+  border: 1px solid $color-primary;
+  border-radius: 50%;
+  display: block;
+  float: left;
+  width: 20px;
+  height: 20px;
+  margin-left: -30px;
+  text-align: center;
+  position: relative;
+  top: 4px;
+
+  .cases-toggle-bar {
+    background-color: $color-primary;
+    display: block;
+    height: 1px;
+    width: 70%;
+
+    position: absolute;
+    top: 44%;
+    left: 3px;
+
+    transition: .2s ease-in-out;
+    transform: rotate(45deg);
+
+    + .cases-toggle-bar {
+      transform: rotate(-45deg);
+    }
+  }
+
+  .collapsed & {
+    .cases-toggle-bar {
+      transform: rotate(0deg);
+      top: 48%;
+      left: 3px;
+
+      + .cases-toggle-bar {
+        opacity: 0;
+      }
+    }
+  }
+}
+.cases--table {
+  table-layout: fixed;
+}
+.cases--case {
+  white-space: nowrap;
+  width: 80px;
+}
+.cases--patient-name {
+  white-space: nowrap;
+  width: 27.8422274%;
+}
+.cases--status {
+  /* this requires table.cases--table to work */
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+.new-message-button {
+  border: 1px solid lighten(#a5a6a8,20%);
+  border-radius: 3px;
+  cursor: text;
+  padding: 5px 10px;
+
+  &:hover {
+    border-color: lighten(#a5a6a8,10%);
+  }
+  span {
+    color: lighten(#a5a6a8,10%);
+    float: left;
+  }
+}
+
+#open-cases,
+#completed-cases {
+  .table > tbody > tr > td,
+  .table > thead > tr > th{
+    border: none;
+  }
+  .table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #ededed;
+  }
+  .table-hover > tbody > tr:hover {
+    background-color: $color-secondary;
+  }
+}

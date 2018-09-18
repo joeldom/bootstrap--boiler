@@ -1,0 +1,11 @@
+.input-plus-icon {
+  position: relative;
+  display: block;
+
+  .fa.icon {
+    color: $color-accent;
+    position: absolute;
+    top: 5px;
+    right: 6px; 
+  }
+}

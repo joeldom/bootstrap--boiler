@@ -1,0 +1,40 @@
+.modal-tour {
+  .modal-content {
+    border-radius: 0;
+  }
+  .modal-body {
+    padding: $padding-large;
+  }
+  .modal-footer {
+    border: none;
+    padding: 0;
+  }
+}
+
+.tour-controls {
+
+}
+
+.tour-image {
+  width: 100%;
+}
+
+.tour-control--previous,
+.tour-control--next {
+  display: block;
+  cursor: pointer;
+  float: left;
+  background: $gray-lighter;
+  color: $text-color;
+  text-decoration: none;
+  text-align: center;
+  padding: $padding-medium;
+  transition: all .15s;
+  width: 50%;
+
+  &:hover {
+    background: $color-primary;
+    color: #FFF;
+    text-decoration: none;
+  }
+}

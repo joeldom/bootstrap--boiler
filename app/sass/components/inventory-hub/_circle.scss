@@ -1,0 +1,83 @@
+@mixin circle() {
+  background: $gray;
+  border-radius: 50%;
+  color: white;
+  display: block;
+  font-size: 18px;
+  height: 50px;
+  padding-top: 12px;
+  text-align: center;
+  width: 50px;
+  position: relative;
+}
+
+.circle {
+  @include circle;
+
+  &__primary {
+    background: $color-primary;
+  }
+
+  &__secondary {
+    background: $color-secondary;
+  }
+
+  &__accent {
+    background: $color-accent;
+  }
+
+  &__gray {
+    background: $ih-color--gray-darker;
+  }
+
+  &__gray-darkest {
+    background: $ih-color--gray-darkest;
+  }
+
+  &__white {
+    background: #FFF;
+    border: 1px solid $ih-color--gray-darker;
+    color: $ih-color--gray-darker;
+  }
+
+  &__fa {
+    .fa {
+      position: relative;
+      top: 2px;
+    }
+  }
+}
+
+.circle__radio {
+  input {
+    display: none;
+  }
+
+  label {
+    @include circle;
+    background: #FFF;
+    border: 1px solid $ih-color--gray-darker;
+    color: $ih-color--gray-darker;
+  }
+
+  input:checked ~ label {
+    background: $color-primary;
+    border-color: $color-primary;
+    color: #FFF;
+  }
+}
+
+.circle-small {
+  background: $ih-color--gray-darkest;
+  border-radius: 50%;
+  color: #FFF;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding-top: 1px;
+  text-align: center;
+
+  &__inline {
+    display: inline-block;
+  }
+}

@@ -1,0 +1,22 @@
+.favorite {
+  cursor: pointer;
+
+  .fa-star {
+    display: none;
+    color: $yellow;
+  }
+  .fa-star-o {
+    color: darken($gray-lighter,10%);
+  }
+
+  //  For hover and active state we show the full star.
+  &:hover,
+  &.active {
+    .fa-star {
+      display: inline;
+    }
+    .fa-star-o {
+      display: none;
+    }
+  }
+}

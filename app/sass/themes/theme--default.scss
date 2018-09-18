@@ -1,0 +1,55 @@
+// CIMZIA colors
+$color--orange: #F28800;
+$color--orange-75: #fc9d46;
+$color--orange-50: #ffbc7f;
+$color--orange-25: #ffddbc;
+$color--orange-25: #fff1e3;
+
+$color--green: #225E36;
+$color--green-75: #50785a;
+$color--green-50: #85a18a;
+$color--green-25: #c0cec1;
+$color--green-10: #e6ebe5;
+
+$color--black: #191818;
+$color--black-75: #4f4f4e;
+$color--black-50: #7f7f7e;
+$color--black-25: #b7b8b7;
+$color--black-10: #e0e0df;
+
+$color--gray: #c2c0c1;
+$color--gray-75: #d2d0cf;
+$color--gray-50: #e0dfdf;
+$color--gray-25: #f0efee;
+$color--gray-10: #faf8f8;
+
+// Computed colors
+$color-primary: $color--orange;
+$color-secondary: $color--green;
+$color-accent: $color--orange;
+$text-color: $color--black-75;
+
+$link-color: $color--orange;
+$link-hover-color: darken($link-color, 15%) !default;
+
+$table-case-listing-requiring-attention--bkg-color--odd: $color--black-10;
+$table-case-listing-requiring-attention--bkg-color--even: darken($color--black-10, 5%);
+$table-case-listing-requiring-attention--bkg-color--odd--hover: $color-secondary;
+$table-case-listing-requiring-attention--bkg-color--even--hover: $color-secondary;
+
+$table-bg-hover: $color-secondary;
+
+$well-accent--bkg-color: lighten($color-accent,30%);
+$well-accent--border-color: $color-accent;
+$case-requiring-action--bkg-color: lighten($color-accent,25%);
+
+$case-detail--accent-bkg-color: lighten($color-accent,25%);
+
+$single-drug--width: auto;
+$single-drug--min-height: auto;
+$drug-selection-slideshow--img--margin: 0 0 1px;
+
+$label-warning-bg--theme: $color-accent;
+
+// fonts
+$font--futura: "futura-pt", "Helvetica Neue", Helvetica, Arial, sans-serif !default;

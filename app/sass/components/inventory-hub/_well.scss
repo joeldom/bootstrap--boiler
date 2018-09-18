@@ -1,0 +1,69 @@
+.well.well-scan {
+  margin-bottom: 0;
+  background: #FFF;
+  border-color: #E6E6E6;
+  color: #BBBBBB;
+  font-weight: bold;
+
+  &--success {
+    background: $color-secondary;
+    border: none;
+    color: #FFF;
+  }
+
+  &--warning {
+    background: #545759;
+    border: none;
+    color: #FFF;
+  }
+
+  &--alert {
+    background: $btn-danger-bg;
+    border: none;
+    color: #FFF;
+  }
+
+  &--manual {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 0;
+
+    .form-group {
+      margin-right: 3%;
+      margin-bottom: 0;
+      float: left;
+      width: 16%;
+
+      label {
+        margin-bottom: 0;
+        color: $gray-light;
+        font-weight: normal;
+      }
+
+      &.has-error label {
+        color: $alert-danger-text;
+      }
+
+      .help-block {
+        margin-bottom: 0;
+        line-height: 1.2;
+      }
+    }
+
+    .datepicker--wrapper > input {
+      width: 100% !important;
+    }
+  }
+}
+
+.well.well--with-icon {
+  padding-left: 19px + 30px;
+
+  .fa {
+    float: left;
+    margin-left: -30px;
+    position: relative;
+    top: 4px;
+  }
+}

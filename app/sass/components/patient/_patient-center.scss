@@ -1,0 +1,10 @@
+.patient-center-controls {
+  margin-bottom: $padding-large;
+
+  .patient-filters {
+    @include make-xs-column(4);
+  }
+  .add-patient {
+    @include make-xs-column(8);
+  }
+}

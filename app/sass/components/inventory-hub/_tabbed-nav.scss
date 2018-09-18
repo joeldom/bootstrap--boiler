@@ -1,0 +1,33 @@
+.nav-tabbed {
+  font-size: 12px;
+  margin-top: $unit;
+
+  ul {
+    @include list-reset-inline;
+  }
+
+  a {
+    color: $text-color;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.15s;
+
+    &:hover {
+      border-bottom: 2px solid $color-primary;
+      color: $text-color;
+      text-decoration: none;
+    }
+  }
+
+  li:not(:last-child) {
+    border-right: 1px solid $gray-lighter;
+    padding-right: $unit * 2;
+    margin-right: $unit * 2;
+  }
+  
+  li.active a {
+    border-bottom: 2px solid $color-primary;
+    color: $text-color;
+    text-decoration: none;
+  }
+}

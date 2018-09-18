@@ -1,0 +1,42 @@
+.products-added-widget {
+  h2 {
+    color: $text-color;
+    font-size: 1.25em;
+    margin-top: 0;
+
+    span {
+      color: lighten($text-color, 25%);
+    }
+  }
+
+  h3.products-added-widget__toggle {
+    border-top: 1px solid $gray;
+    border-bottom: 1px solid $gray;
+    cursor: pointer;
+    font-family: $ff-sans-bold;
+    font-size: 1.2em;
+    padding: 12px $unit $unit;
+    position: relative;
+
+    span {
+      display: none;
+      font-size: 2em;
+      font-family: $ff-sans-light;
+      position: absolute;
+      right: 10px;
+      top: 2px;
+    }
+
+    &[aria-expanded="true"] {
+      .open {
+        display: block;
+      }
+    }
+
+    &[aria-expanded="false"] {
+      .closed {
+        display: block;
+      }
+    }
+  }
+}

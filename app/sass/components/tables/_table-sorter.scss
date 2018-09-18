@@ -1,0 +1,69 @@
+//	Table Sorter
+// 	==================================================================
+.tablesorter-header {
+  cursor: pointer;
+  color: $link-color;
+
+  &:hover {
+    color: $link-hover-color;
+  }
+
+  i.fa-caret-up,
+  i.fa-caret-down {
+    display: none;
+  }
+}
+.tablesorter-headerAsc,
+.tablesorter-headerDesc {
+  background-color: $color-primary;
+  border-bottom-color: $color-primary !important;
+  color: #fff;
+
+  &:hover {
+    color: #fff;
+  }
+}
+
+.tablesorter-headerAsc {
+  i.fa-caret-up {
+    display: inline;
+  }
+}
+.tablesorter-headerDesc {
+  i.fa-caret-down {
+    display: inline;
+  }
+}
+
+.tablesorter-active-column,
+.active-column {
+  background-color: lighten($color-primary, 70%);
+  border-color: #fff !important;
+
+  tr:hover & {
+    background-color: $color-secondary;
+  }
+}
+
+.table-case-listing-requiring-attention {
+
+  .tablesorter-headerAsc,
+  .tablesorter-headerDesc {
+    background-color: $color-accent;
+    border-bottom-color: darken($color-accent, 15%) !important;
+    color: #fff;
+
+    &:hover {
+      color: #fff;
+    }
+  }
+
+  .tablesorter-active-column {
+    background-color: $color-accent;
+    color: #FFF;
+
+    tr:hover & {
+      background-color: darken($color-accent, 15%);
+    }
+  }
+}

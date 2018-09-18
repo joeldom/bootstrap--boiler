@@ -1,0 +1,138 @@
+[data-insurance] {
+  &:hover {
+    background: transparentize($color-primary, 0.2);
+    border: 1px solid $color-primary;
+  }
+
+  &.ui-draggable-dragging {
+    background: rgba($color-primary,0.6);
+    border: 1px solid $color-primary;
+  }
+}
+
+.insurance--wrapper:not(.patient-information).ui-droppable-active {
+  border-color: $color-primary;
+  box-shadow: 0 0 10px $color-primary;
+}
+
+
+.utility-header {
+  border-bottom: 1px solid $color--black-10;
+}
+.border-right,
+.border-left,
+.list-group-item {
+  border-color: $color--black-10;
+}
+
+#medicationCoverageParent .list-group hr {
+  border-color: $color--black-10;
+  margin-left: -35px;
+  margin-right: -15px;
+}
+
+.circle-h3 {
+  background: #b7b8b7;
+  border-radius: 50%;
+  color: #FFF;
+  display: block;
+  width: 30px;
+  height: 30px;
+  padding-top: 0px;
+  text-align: center;
+  font-size: .8em;
+  float: left;
+  position: relative;
+  top: 5px;
+  margin-right: 10px;
+
+  .active & {
+    background: $color-primary;
+  }
+}
+
+.tos-container {
+  padding: 0px 34px;
+  height: 500px;
+  overflow: scroll;
+  margin: 10px 0;
+}
+
+.nav-tabs--tos {
+  margin: -10px -15px 0;
+
+  &.nav-tabs > li {
+    &:first-child {
+      width: 40%;
+    }
+    &:last-child {
+      width: 59%;
+    }
+
+    &:first-child > a {
+      border-right: 1px solid #e0e0df !important;
+    }
+
+    > a {
+      border-radius: 0;
+      border: none;
+      color: #b7b8b7;
+      font-size: 28px;
+
+      &:hover,
+      &:focus {
+        background: transparent;
+        color: #F28800;
+      }
+    }
+
+    &.active > a,
+    &.active > a:hover,
+    &.active > a:focus {
+      background: transparent;
+      border: none;
+      color: #F28800;
+      margin: 0;
+    }
+  }
+}
+
+.cimzia-drug-image-in-sidebar {
+  margin: 30px 0 0 20px;
+}
+
+
+.radio-toolbar label {
+  border-color: $color--black-75;
+  background: transparent;
+  border: 1px solid $color--black-75;
+  border-radius: 15px;
+  color: $color--black-75;
+
+  &:hover {
+    background: $color--black-75;
+  }
+}
+
+.close-sm {
+  font-size: 16px;
+  position: relative;
+  top: 7px;
+}
+
+.well-accent, .well-accent__outline {
+  background-color: $color--black-10;
+  border-color: $color--black-75;
+}
+
+.well-accent:hover {
+  background-color: darken($color--black-10,5%);
+}
+
+.well-accent__outline {
+  background: transparent;
+}
+
+.icon-shield-check {
+  color: $brand-success;
+}

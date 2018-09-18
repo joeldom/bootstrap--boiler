@@ -1,0 +1,13 @@
+.time-wrapper {
+  position: relative;
+
+  input[type="time"] {
+    padding-right: 20px;
+  }
+
+  .fa {
+    position: absolute;
+    top: 5px;
+    right: 8px;
+  }
+}

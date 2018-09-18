@@ -1,0 +1,17 @@
+.messages {
+  font-size: .9em;
+  margin-bottom: $padding-medium;
+  padding: 0 $padding-small;
+
+  .message {
+    border-bottom: 1px solid $gray-lighter;
+    margin-bottom: $padding-small;
+  }
+  .message--reply {
+    padding-left: $padding-medium;
+  }
+}
+.message-file {
+  border: none;
+  box-shadow: none;
+}

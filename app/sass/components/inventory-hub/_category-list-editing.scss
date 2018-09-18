@@ -1,0 +1,40 @@
+.ih-category-list {
+  @include list-reset;
+
+  .flexbox & {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  li {
+    margin-bottom: 10px;
+
+    .flexbox & {
+      width: 50%;
+    }
+
+    .no-flexbox & {
+      display: inline-block;
+      width: 48%;
+    }
+
+    button[type="submit"] {
+      height: 24px;
+      padding-top: 2px;
+      margin-left: 5px;
+    }
+  }
+}
+
+.ih-category-list__editing-tools {
+  color: lighten($gray-light,10%);
+
+  .fa {
+    margin-right: 10px;
+  }
+
+  .fa:hover {
+    color: $link-color;
+    cursor: pointer;
+  }
+}

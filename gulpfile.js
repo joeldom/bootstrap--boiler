@@ -2,6 +2,8 @@ var gulp = require('gulp');
 var sass = require('gulp-sass');
 var browserSync = require('browser-sync');
 var useref = require('gulp-useref');
+var beautify = require('gulp-beautify');
+var prettify = require('gulp-prettify');
 var uglify = require('gulp-uglify');
 var gulpIf = require('gulp-if');
 var cssnano = require('gulp-cssnano');
@@ -36,7 +38,8 @@ gulp.task('browserSync', function() {
 
 //Run SASS preprocess
 gulp.task('sass', function() {
-  return gulp.src('app/sass/**/*.scss') // Gets all files ending with .scss in app/scss and children dirs
+  //return gulp.src('app/sass/**/*.scss') // Gets all files ending with .scss in app/scss and children dirs
+  return gulp.src('app/sass/global.scss') // Gets all files ending with .scss in app/scss and children dirs
     .pipe(sass().on('error', sass.logError)) // Passes it through a gulp-sass, log errors to console
     .pipe(gulp.dest('app/css')) // Outputs it in the css folder
     .pipe(browserSync.reload({ // Reloading with Browser Sync
@@ -44,6 +47,20 @@ gulp.task('sass', function() {
     }));
 })
 
+
+gulp.task('prettify', function() {
+  gulp.src('app/**/*.html')
+    .pipe(prettify({indent_size: 2}))
+    .pipe(gulp.dest('dist'))
+});
+
+//FINISH ADDING to config file
+//
+// gulp.task('beautify', function() {
+//   gulp.src('./src/*.js')
+//     .pipe(beautify({indent_size: 2}))
+//     .pipe(gulp.dest('./dist/'))
+// });
 
 //THIS IS WRONG AND NOT WORKING
 // gulp.task('compile', function () {
@@ -67,6 +84,7 @@ gulp.task('sass', function() {
 gulp.task('watch', function() {
   gulp.watch('app/sass/**/*.scss', ['sass']);
   gulp.watch('app/*.html', browserSync.reload);
+  gulp.watch('app/pages/**/*.html', browserSync.reload);
   //gulp.watch('twig/*.twig', browserSync.reload);
   gulp.watch('app/js/**/*.js', browserSync.reload);
 })
@@ -115,7 +133,7 @@ gulp.task('clean:dist', function() {
 // ---------------
 
 gulp.task('default', function(callback) {
-  runSequence(['hello', 'sass', 'browserSync', 'bye'], 'watch',
+  runSequence(['hello', 'sass', 'prettify', 'browserSync', 'bye'], 'watch',
     callback
   )
 })
@@ -124,9 +142,11 @@ gulp.task('build', function(callback) {
   runSequence(
     'hello',
     'clean:dist',
+    'prettify',
     'sass',
     //'compile',
     ['useref', 'images', 'fonts'],
+    'browserSync',
     'bye',
     callback
   )

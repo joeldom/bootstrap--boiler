@@ -1,0 +1,96 @@
+.prescriber-list,
+.clinic-list {
+  column-count: 3;
+}
+
+
+.my-prescriber-list--four-col,
+.my-clinic-list--four-col {
+  column-count: 4;
+}
+.my-prescriber-list--three-col,
+.my-clinic-list--three-col {
+  column-count: 3;
+}
+.my-prescriber-list--two-col,
+.my-clinic-list--two-col {
+  column-count: 2;
+}
+.my-prescriber-list,
+.my-clinic-list {
+  > .checkbox {
+    margin-top: 0;
+    display: inline-block;
+    width: 100%;
+
+    input[type="checkbox"] {
+      margin-top: 0;
+    }
+  }
+}
+
+.my-prescribers--selections,
+.my-clinic--selections {
+  margin-right: 190px;
+  margin-bottom: 0;
+  padding-left: 10px;
+  overflow: hidden;
+
+  li {
+    background-color: $chosen-background;
+    background-clip: padding-box;
+    border: $chosen-border;
+    border-color: $color-secondary;
+    border-radius: $chosen-border-radius;
+    color: $color-secondary;
+    float: left;
+    font-size: .9em;
+    height: $chosen-height;
+    line-height: $chosen-height;
+    margin-bottom: 5px;
+    margin-right: 1%;
+    padding-left: 8px;
+    padding-right: 20px;
+    position: relative;
+    text-decoration: none;
+    width: (100% - (1% * 4)) / 4;
+
+    //  To activate the ellipsis
+    //  when the content is too wide.
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    span {
+      cursor: pointer;
+      display: block;
+      margin-right: 7px;
+      overflow: visible;
+      position: absolute;
+      top: -1px;
+      right: -2px;
+      &:after {
+        content: "\f00d";
+        font-family: "FontAwesome";
+      }
+    }
+  }
+}
+.my-prescribers--selections--truncated,
+.my-clinic--selections--truncated {
+  max-height: 24px;
+}
+
+.my-prescribers--show-and-hide--wrapper,
+.my-clinic--show-and-hide--wrapper {
+  position: absolute;
+  top:0;
+  right: 15px;
+}
+.my-prescribers--show-and-hide--icon-toggle,
+.my-clinic--show-and-hide--icon-toggle{
+  border-color: darken(#ccc,30%);
+  border-radius: 4px;
+  color: darken(#ccc,30%);
+  cursor: pointer;
+}

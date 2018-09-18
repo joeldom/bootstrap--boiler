@@ -1,0 +1,52 @@
+.scanner-wrapper {
+  input {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+}
+
+.scanner-input {
+  display: block;
+  background: $gray-lighter;
+  border-radius: 50%;
+  border: 1px solid darken(#EAEAEA,10%);
+  cursor: pointer;
+  float: left;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+
+  &:hover {
+    border-color: darken(#EAEAEA,15%);
+  }
+}
+.scanner-input--scanner .scanner-icon {
+  margin-top: 8px;
+}
+.scanner-input--manual .fa {
+  margin-top: 9px;
+  font-size: 2.3em;
+}
+
+input[name="scanner-input-type"]:checked ~ .scanner-input {
+  background: $color-primary;
+  border-color: transparent;
+
+  i {
+    color: #FFF;
+  }
+
+  .scanner-icon {
+    color: #FFF;
+  }
+}
+
+.scanner-icon {
+  width: 33px;
+  height: 32px;
+}
+
+.ih-popover + .popover {
+  z-index: 10000;
+}

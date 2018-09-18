@@ -4,7 +4,36 @@
 //@import 'config/**';
 //@import 'vendor/**';
 //@import 'components/**';
-@import 'config/variables';
-@import 'config/warning';
-//@import 'config/reset';
-//@import 'config/mixins';
+// @import 'config/variables';
+ @import 'config/warning';
+ @import 'config/alacarte';
+
+ // @import "themes/theme--default";
+
+//  Global styles
+// // //  ========================================================
+// @import "global/theme-colors";
+// @import "themes/cimzia/variables";
+// @import "global/mixins";
+// @import "global/variables";
+// @import "global/font-frutiger";
+// @import "global/font-awesome.min";
+// @import "global/normalize";
+// @import "global/print";
+// @import "global/glyphicons";
+// @import "global/utilities";
+// @import "global/responsive-utilities";
+// @import "global/component-animations";
+// @import "global/utility-dropdown";
+
+// Core styles
+//  ========================================================
+// @import "core/scaffolding-bootstrap";
+// @import "core/type";
+// @import "core/code";
+// @import "core/grid";
+// @import "core/forms";
+// @import "core/buttons";
+// @import "core/typeahead";
+// @import "core/datepicker";
+// @import "core/kendo-ui";

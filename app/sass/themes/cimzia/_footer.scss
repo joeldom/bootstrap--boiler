@@ -1,0 +1,19 @@
+.footer .container {
+  background: $color--black-75;
+  box-shadow: none;
+  color: #FFF;
+
+  a {
+    color: #FFF;
+    text-decoration: underline;
+
+    &:hover {
+      color: $color-primary;
+    }
+  }
+
+  p {
+    font-family: $ff-frutiger-sans;
+    font-size: 10px;
+  }
+}

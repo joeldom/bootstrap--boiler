@@ -1,0 +1,66 @@
+.notification-bar {
+  background-color: $color-primary;
+  border-radius: 3px;
+  color: #fff;
+  font-size: .9em;
+  font-family: $ff-sans-light;
+  margin-bottom: $padding-medium;
+ 
+  span {
+    display: inline-block;
+    padding: 6px 10px 3px;
+    line-height: 1.2;
+  }
+  
+  a {
+    color: #fff;
+    display: block;
+  }
+  
+  @media print {
+    border-bottom: 2px solid #a5a6a8;
+    border-radius: 0;
+  }
+}
+.notification-bar--open-case {
+  background-color: $color-primary;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+
+  &:hover {
+    background-color: darken($color-primary,15%);
+  }
+
+  @media print {
+    border-bottom: 2px solid $color-primary;
+    border-radius: 0;
+  }
+}
+.notification-bar--completed {
+  background-color: #a5a6a8;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+
+  &:hover {
+    background-color: darken(#a5a6a8,15%);
+  }
+
+  @media print {
+    border-bottom: 2px solid $color-primary;
+    border-radius: 0;
+  }
+}
+.notification-bar--action-required {
+  background-color: $color-accent;
+  border-top-right-radius: 3px;
+  border-bottom-right-radius: 3px;
+
+  &:hover {
+    background-color: darken($color-accent,15%);
+  }
+
+  @media print {
+    border-bottom: 2px solid $color-primary;
+    border-radius: 0;
+  }
+}

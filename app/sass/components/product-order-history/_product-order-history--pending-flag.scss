@@ -1,0 +1,12 @@
+#productOrderHistory_chosen .chosen-results {
+  // Change the value of nth-child if Pending Order changes position.
+  li:nth-child(2) {
+    &:before {
+      content: '\f024';
+      display: inline-block;
+      color: $color-accent;
+      font-family: 'FontAwesome';
+      margin-right: $padding-small;
+    }
+  }
+}

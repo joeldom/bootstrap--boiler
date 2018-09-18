@@ -1,0 +1,8 @@
+.row__prescriber {
+  .col-xs-5 {
+    @include make-xs-column(4.5);
+  }
+  .col-xs-2 {
+    @include make-xs-column(3);
+  }
+}

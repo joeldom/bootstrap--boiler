@@ -1,0 +1,126 @@
+/**********************************************************
+ *     typeahead.js v0.11.1 - twitter bootstrap v3.3.5    *
+ **********************************************************/
+
+/*root typeahead class*/
+.twitter-typeahead {
+  display: inherit !important;
+  width: 100%;
+}
+
+.prior-medications--has-twitter-typeahead .twitter-typeahead {
+  width: auto;
+}
+
+
+.twitter-typeahead .tt-input[disabled] {
+  background-color : #eeeeee !important;
+}
+
+/*Added to input that's initialized into a typeahead*/
+.twitter-typeahead .tt-input {
+
+}
+
+/*Added to hint input.*/
+.twitter-typeahead .hint {
+
+}
+
+/*Added to menu element*/
+.twitter-typeahead .tt-menu {
+  width: 100%;
+  max-height: 500px;
+  overflow-y: scroll;
+  border: 1px solid #cccccc;
+  box-shadow: 2px 2px 10px $gray-lighter;
+  background: #FFF;
+}
+
+/*Added to dataset elements*/
+.twitter-typeahead .tt-dataset {
+
+}
+
+/*dded to suggestion elements*/
+.twitter-typeahead .tt-suggestion {
+  border-bottom: 1px solid #cccccc;
+  color: $text-color;
+  line-height: 1.1;
+  padding: 7px 20px;
+  font-size: 14px;
+}
+
+/*Added to menu element when it contains no content*/
+.twitter-typeahead .tt-empty {
+  background-color: white;
+}
+
+/*Added to menu element when it is opened*/
+.twitter-typeahead .tt-open {
+  background-color: white;
+}
+
+/*Added to suggestion element when menu cursor moves to said suggestion*/
+.twitter-typeahead .tt-suggestion:hover,
+.twitter-typeahead .tt-suggestion:focus,
+.twitter-typeahead .tt-cursor {
+  cursor: hand !important;
+  background-color: #337ab7;
+  color: white;
+}
+
+/*Added to the element that wraps highlighted text*/
+.twitter-typeahead .tt-highlight {
+
+}
+
+.twitter-typeahead p {
+  margin: 0;
+}
+
+ .empty-message {
+  padding: 3px 20px;
+}
+
+.twitter-typeahead .patient-search-filter-result {
+  small {
+    display: block;
+    margin-top: 3px;
+    color: lighten($gray-light,15%);
+    font-size: 12px;
+  }
+
+  &.tt-cursor small {
+    color: #FFF;
+  }
+}
+
+.twitter-typeahead .patient-search-filter-result-2 {
+  border-bottom: none;
+  font-family: $font-family-sans-serif;
+
+  strong {
+    font-family: $font-family-sans-serif;
+  }
+
+  &__name {
+    font-weight: bold;
+    font-size: 1.1em;
+  }
+
+  small {
+    display: block;
+    margin-top: 3px;
+    font-size: 12px;
+  }
+
+  &__label {
+    color: lighten($gray-light,15%);
+    font-weight: bold;
+  }
+
+  &.tt-cursor small {
+    color: #FFF;
+  }
+}

@@ -1,0 +1,79 @@
+// 	==================================================================
+//  Thyrogen
+//
+//	Author  : Randy Oest
+//	Company : Amazing Rando Design
+//	Email   : oest@amazingrando.com
+//	Date    : Fall 2016
+// 	==================================================================
+
+@import 'themes/theme--thyrogen';
+@import 'themes/theme--default-import';
+
+
+//  ========================================================
+//  Synvisc theme overrides
+//  ========================================================
+
+// Enroll Widget
+.enroll-in-eordering.enroll-in-eordering__decorative,
+.enroll-in-bv {
+  background: $color-accent;
+
+  h3 {
+    background: url('@@imgCSS/enroll-arrow--thyrogen.png') no-repeat center left;
+  }
+  ul li .fa.color-accent {
+    color: $color-primary;
+  }
+  .btn {
+    background: $color-primary;
+  }
+}
+
+
+.header_primary {
+  overflow: visible; // This is so that logo can hang down.
+}
+
+.product-logo {
+  position: absolute;
+  top: -6px;
+  width: 220px;
+}
+
+.btn-secondary {
+  background-color: $color-primary;
+  border-color: $color-primary;
+
+  &:hover {
+    background-color: darken($color-primary,10%);
+    border-color: darken($color-primary,10%);
+  }
+}
+
+.well-accent {
+  background-color: lighten($color-primary,50%);
+  border-color: $color-primary;
+
+  &__outline {
+    background: transparent;
+  }
+
+  h3 {
+    color: $text-color;
+  }
+}
+
+.eordering-home .ordering-only .main-content-skinny {
+  width: 55%;
+}
+
+.chosen-container .chosen-results li.highlighted {
+  background: $link-color;
+  color: #FFF;
+}
+
+.ui-datepicker .ui-datepicker-header {
+  background: #f5f5f5;
+}

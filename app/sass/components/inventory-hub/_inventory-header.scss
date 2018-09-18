@@ -1,0 +1,26 @@
+.inventory-header {
+  background: $color-secondary;
+  color: #FFF;
+  text-align: center;
+  padding: 25px 0;
+
+  h1 {
+    color: #FFF;
+  }
+
+  .popout-box-wrapper {
+    margin-right: 20px;
+  }
+
+  .popout-button {
+    background: $color-secondary;
+    border-color: #FFF;
+    color: #FFF;
+
+    &:hover {
+      background: darken($color-secondary,10%);
+      border-color: #FFF;
+      color: #FFF;
+    }
+  }
+}

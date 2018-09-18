@@ -1,0 +1,55 @@
+.dispense-nav--wrapper {
+  position: relative;
+}
+
+.dispense-nav {
+  position: absolute;
+  top: 0px;
+  right: 10px;
+  font-size: 12px;
+
+  ul {
+    @include list-reset;
+
+    li {
+      display: block;
+      float: left;
+    }
+  }
+
+  li {
+    a {
+      display: block;
+      color: $color-primary;
+      border: 1px solid $color-primary;
+      padding: 5px 23px;
+
+      &:hover {
+        background: $gray-lighter;
+        text-decoration: none;
+      }
+    }
+
+    &:first-child {
+      a {
+        border-radius: 3px 0 0 3px;
+        border-right: none;
+      }
+    }
+
+    &:last-child {
+      a {
+        border-left: none;
+        border-radius: 0 3px 3px 0;
+      }
+    }
+
+    &.active {
+      a {
+        background: $color-primary;
+        border-color: $color-primary;
+        color: #FFF;
+      }
+    }
+  }
+}

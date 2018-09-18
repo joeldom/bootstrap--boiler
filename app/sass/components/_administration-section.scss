@@ -1,0 +1,22 @@
+.table-practice-details {
+
+  // Remove borders
+  > thead,
+  > tbody,
+  > tfoot {
+    > tr {
+      > th,
+      > td {
+        border-top: none;
+      }
+    }
+  }
+
+  // Reset width
+  width: auto;
+
+  td:first-child {
+    font-family: $ff-sans-bold;
+    padding-right: $padding-medium;
+  }
+}

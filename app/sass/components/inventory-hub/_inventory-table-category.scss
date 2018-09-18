@@ -1,0 +1,15 @@
+.inventory-table-category {
+  @include list-reset;
+  display: inline-block;
+  font-size: 11px;
+  width: 110px;
+
+  li {
+    display: inline-block;
+    width: 50px;
+  }
+
+  &__remove {
+    cursor: pointer;
+  }
+}

@@ -1,0 +1,150 @@
+.lozenge {
+  display: block;
+  height: 50px;
+  border-radius: 50px;
+  text-align: left;
+
+  &__border {
+    border: 1px solid $gray;
+    height: 50px + 2px;
+
+    &__primary {
+      border-color: $color-primary;
+    }
+
+    &__secondary {
+      border-color: $color-secondary;
+    }
+
+    &__accent {
+      border-color: $color-accent;
+    }
+
+    &__gray {
+      border-color: $ih-color--gray-darker;
+    }
+
+    &__gray-darkest {
+      border-color: $ih-color--gray-darkest;
+    }
+  }
+
+  &__background {
+
+    &__white {
+      background: #FFF;
+    }
+
+    &__primary {
+      background: $color-primary;
+      color: #FFF;
+    }
+
+    &__secondary {
+      background: $color-secondary;
+      color: #FFF;
+    }
+
+    &__accent {
+      background: $color-accent;
+      color: #FFF;
+    }
+
+    &__gray {
+      background: $ih-color--gray-darker;
+      color: #FFF;
+    }
+
+    &__gray-darkest {
+      background: $ih-color--gray-darkest;
+      color: #FFF;
+    }
+  }
+
+  &__inner {
+    display: inline-block;
+    font-size: 14px;
+
+    small {
+      color: darken($ih-color--gray-darker,15%);
+    }
+  }
+
+  &.inactive {
+    opacity: 0.5;
+  }
+
+  .circle {
+    display: inline-block;
+    margin-right: 10px;
+  }
+
+  .table & {
+    height: 35px;
+    border-radius: 35px;
+    border: 1px solid $ih-color--gray-darker;
+
+    .lozenge__inner {
+      width: 80%;
+    }
+
+    .twitter-typeahead {
+      position: relative;
+      top: 6px;
+      left: 17px;
+    }
+
+    input {
+      color: $text-color !important;
+      font-size: 13px;
+    }
+  }
+}
+
+
+.lozenge__input {
+  border: none;
+  border-bottom: 1px solid $ih-color--gray-darker;
+  font-size: 14px;
+  width: 100%;
+
+  &::placeholder {
+    color: $ih-color--gray-darker;
+  }
+
+  &--error {
+    border-bottom: 2px solid $brand-danger;
+  }
+}
+
+.lozenge-items {
+  @include list-reset-inline;
+  position: relative;
+  top: -8px;
+}
+li.lozenge-item {
+  font-size: 14px;
+  padding-right: 20px;
+  vertical-align: top;
+
+  &--bigger {
+    font-size: 18px;
+    position: relative;
+    top: 4px;
+  }
+
+  .help-block {
+    font-size: 10px;
+  }
+}
+.lozenge-item__label,
+.lozenge-item label {
+  display: block;
+  font-size: 11px;
+}
+
+.lozenge-item label {
+  color: $ih-color--gray-darker;
+  font-family: $ff-sans;
+  margin-bottom: 2px;
+}

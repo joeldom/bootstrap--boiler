@@ -1,0 +1,31 @@
+.month-year-combination-field {
+  .form-inline & {
+    display: inline-block;
+    vertical-align: text-bottom;
+  }
+
+  select.first + .chosen-container .chosen-single {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  select.last + .chosen-container {
+    margin-left: -5px;
+
+    .chosen-single {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  &.has-error {
+    .chosen-container-single .chosen-single {
+      border-color: $brand-danger;
+      color: $brand-danger;
+
+      span::after {
+        color: $brand-danger;
+      }
+    }
+  }
+}

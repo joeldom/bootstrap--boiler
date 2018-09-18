@@ -1,0 +1,12 @@
+.new-case-summary {
+  p {
+    font-size: .8em;
+    margin-bottom: $padding-xsmall;
+  }
+  .new-case-summary--fullfillment {
+    font-size: 1.1em;
+  }
+  .new-case-summary--indent {
+    padding-left: $padding-large;
+  }
+}

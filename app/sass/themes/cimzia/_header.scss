@@ -1,0 +1,23 @@
+// Nav user
+.nav-user,
+.nav-user a,
+.nav-user label {
+  color: $color--black-25;
+}
+
+// Search
+#searchInput {
+  display: none;
+}
+
+// Nav primary
+.nav-primary > ul > li > a {
+  color: $text-color;
+}
+.nav-primary > ul > li.active > a {
+  border-bottom-color: transparent;
+}
+.nav-primary > ul > li > a:hover,
+.nav-primary > ul > li.active > a:hover {
+  color: $color-primary;
+}

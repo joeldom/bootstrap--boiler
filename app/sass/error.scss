@@ -1,0 +1,64 @@
+// 	==================================================================
+//  Error
+// 	==================================================================
+
+$color-primary: black;
+$color-secondary: black;
+$color-accent: black;
+$text-color: #545759;
+
+$link-color: blue;
+$link-hover-color: darken($link-color, 15%) !default;
+
+$label-warning-bg--theme: $color-primary;
+
+.color-primary {
+  color: $color-primary;
+}
+
+.color-secondary {
+  color: $color-secondary;
+}
+
+.color-accent {
+  color: $color-accent;
+}
+
+.background-color-primary {
+  background-color: $color-primary;
+}
+
+.background-color-secondary {
+  background-color: $color-secondary;
+}
+
+.background-color-accent {
+  background-color: $color-accent;
+}
+
+//  Global styles
+//  ========================================================
+@import 'global/variables';
+@import 'global/mixins';
+@import 'global/font-frutiger';
+@import 'global/font-awesome.min';
+@import 'global/normalize';
+@import 'global/print';
+@import 'global/glyphicons';
+@import 'global/utilities';
+@import 'global/responsive-utilities';
+@import 'global/margin-control-utilities';
+@import 'global/component-animations';
+@import 'global/utility-dropdown';
+
+// Core styles
+//  ========================================================
+@import 'core/scaffolding-bootstrap';
+@import 'core/type';
+//@import 'core/code';
+@import 'core/grid';
+//@import 'core/forms';
+//@import 'core/buttons';
+//@import 'core/typeahead';
+//@import 'core/datepicker';
+//@import 'core/kendo-ui';

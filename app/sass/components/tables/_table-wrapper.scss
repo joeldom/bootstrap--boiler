@@ -1,0 +1,32 @@
+.table-wrapper--wrapper {
+  margin-bottom: $padding-xlarge;
+  display: block;
+  overflow: auto;
+}
+
+.table-wrapper--button {
+  position: absolute;
+  bottom: $padding-small;
+  left: 50%;
+  width: 242px;
+  margin-left: -106px;
+
+  background-color: #FFF;
+  border-radius: 2em;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  cursor: pointer;
+  font-family: $ff-sans-bold;
+  line-height: 1.1;
+  padding: 10px 0 5px;
+  text-transform: uppercase;
+  text-align: center;
+
+  .table-wrapper--button-accent & {
+    background: $color-accent;
+    color: #FFF;
+  }
+}
+
+.table-wrapper--wrapper--border-bottom {
+  border-bottom: 1px solid $gray-light;
+}

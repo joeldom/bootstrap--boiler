@@ -1,0 +1,241 @@
+.case-list-number-of-cases-requiring-attention {
+  font-size: 1.85em;
+  font-family: $ff-sans-bold;
+}
+
+
+.table-case-listing-requiring-attention {
+
+  table {
+    table-layout: fixed;
+    width: 100%;
+  }
+
+  &.table table[role="grid"] > thead > tr > th {
+    border-bottom: none;
+  }
+
+
+  > thead > tr {
+    th {
+      border-color: transparent;
+      border-right-color: #FFF;
+    }
+  }
+
+  > tbody > tr,
+  .k-grid-content table > tbody > tr {
+    &:nth-of-type(odd) {
+      background-color: $table-case-listing-requiring-attention--bkg-color--odd;
+    }
+    &:nth-of-type(even) {
+      background-color: $table-case-listing-requiring-attention--bkg-color--even;
+    }
+
+    &:hover {
+
+      &:nth-of-type(odd) {
+        background-color: $table-case-listing-requiring-attention--bkg-color--odd--hover;
+      }
+      &:nth-of-type(even) {
+        background-color: $table-case-listing-requiring-attention--bkg-color--even--hover;
+      }
+
+      .tablesorter-active-column {
+        background-color: darken($color-accent,10%);
+        border-color: transparent;
+        border-right-color: #FFF;
+      }
+    }
+
+    td {
+      border-color: transparent;
+      border-right-color: #FFF;
+
+      &.tablesorter-active-column {
+        border-bottom: 1px solid darken($color-accent,10%) !important;
+      }
+    }
+  }
+
+  //  Hide the kendo pager
+  .k-pager-wrap {
+    display: none;
+  }
+}
+
+// Flag
+.has-flag a,
+.has-flag i {
+  color: $color-accent;
+
+  .table-hover > tbody > tr:hover & {
+    color: $color-accent;
+  }
+}
+.table-case-listing-requiring-attention {
+  > tbody > tr {
+    &:nth-of-type(odd) {
+      td.has-flag {
+        background-color: $table-bg-accent;
+      }
+    }
+    &:nth-of-type(even) {
+      td.has-flag {
+        background-color: #FFF;
+      }
+    }
+  }
+}
+
+.table-case-listing-requiring-attention,
+.case-list-table {
+
+  table th:nth-child(1),
+  table td:nth-child(1),
+  .cd-caseID {
+    width: percentage(93/1140);
+  }
+
+  table th:nth-child(2),
+  table td:nth-child(2),
+  .cd-type {
+    width: percentage(76/1140);
+  }
+
+  table th:nth-child(3),
+  table td:nth-child(3),
+  .cd-status {
+    width: percentage(261/1140);
+  }
+
+  table th:nth-child(4),
+  table td:nth-child(4),
+  .cd-patient {
+    width: percentage(145/1140);
+  }
+
+  table th:nth-child(5),
+  table td:nth-child(5),
+  .cd-mrn {
+    width: percentage(145/1140);
+  }
+
+  table th:nth-child(6),
+  table td:nth-child(6),
+  .cd-updated {
+    width: percentage(105/1140);
+  }
+
+  table th:nth-child(7),
+  table td:nth-child(7),
+  .cd-submitted {
+    width: percentage(105/1140);
+  }
+
+  table th:nth-child(8),
+  table td:nth-child(8),
+  .cd-prescriber {
+    width: percentage(184/1140);
+  }
+
+  table th:nth-child(9),
+  table td:nth-child(9),
+  .cd-special {
+    // empty
+  }
+
+  .k-grid-header {
+    padding-right: 0px !important;
+ }
+}
+
+.case-list-border-top {
+  border-top: 1px solid darken($gray-lighter,15%);
+}
+
+.table-has-pagination {
+  margin-bottom: 30px;
+}
+
+.table-pagination {
+  .showing,
+  .pagination,
+  .input-group-wrapper {
+    display: inline-block;
+    margin: 0;
+  }
+  .showing {
+    height: 27px;
+    position: relative;
+    top: -9px;
+    margin-right: $padding-small;
+  }
+  .pagination {
+    margin-right: $padding-small;
+  }
+  .input-group-wrapper {
+    width: 175px;
+
+    .form-control {
+      height: 27px;
+    }
+  }
+
+  .fa {
+    font-size: .9em;
+  }
+}
+
+#table-pagination-top {
+  background-color: #FFF;
+  padding-top: $padding-medium;
+  width: 1170px;
+  z-index: 100;
+
+  &.affix {
+    border-bottom: 1px solid darken($gray-lighter,15%);
+    position: fixed;
+
+    + .col-xs-12 {
+      margin-top: 88px;
+    }
+  }
+}
+#table-pagination-bottom {
+  &.affix {
+    background: #FFF;
+    border-top: 1px solid darken($gray-lighter,15%);
+    bottom: 34px; // .footer-fixed height
+    padding-top: $padding-small;
+    width: 1170px - 30px;
+  }
+}
+
+.case-list-table {
+  margin-bottom: 50px;
+
+  table {
+    table-layout: fixed;
+  }
+
+  // Kendo
+  // ==================================
+
+  //  Set the widths to 100%
+  .k-grid-content,
+  .k-grid-header {
+    table {
+      width: 100%;
+    }
+  }
+
+  .k-grid-header table[role="grid"] > thead > tr > th {
+    border-bottom: none;
+  }
+
+  .k-pager-wrap {
+    display: none;
+  }
+}
+
